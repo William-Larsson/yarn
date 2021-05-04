@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <script defer src="./peerjs.js"></script>
+        <script defer src="./call.js"></script>
+    </head>
+    <body>
+        <!--Auto-play the remote video when it get connected-->
+        <video autoplay class="secondary-video" id="remote-video" src=""></video>
+
+        <!--Local video from the device, mute audio by default-->
+        <video autoplay muted class="primary-video" id="local-video" src=""></video>
+    </body>
+</html>
