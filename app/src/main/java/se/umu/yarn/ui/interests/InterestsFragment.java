@@ -1,4 +1,4 @@
-package se.umu.yarn.ui.notifications;
+package se.umu.yarn.ui.interests;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,17 +14,17 @@ import androidx.lifecycle.ViewModelProvider;
 
 import se.umu.yarn.R;
 
-public class NotificationsFragment extends Fragment {
+public class InterestsFragment extends Fragment {
 
-    private NotificationsViewModel notificationsViewModel;
+    private InterestsViewModel interestsViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        notificationsViewModel =
-                new ViewModelProvider(this).get(NotificationsViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_notifications, container, false);
-        final TextView textView = root.findViewById(R.id.text_notifications);
-        notificationsViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+        interestsViewModel =
+                new ViewModelProvider(this).get(InterestsViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_interests, container, false);
+        final TextView textView = root.findViewById(R.id.text_home);
+        interestsViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);
