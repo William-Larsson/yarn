@@ -44,13 +44,14 @@
                 android:layout_width="282dp"
                 android:layout_height="wrap_content"
                 android:text="@string/interests_knitting"
-                />
+                android:textColor="#000000" />
 
             <RadioButton
                 android:id="@+id/radioButton2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:checked="true"/>
+                android:textColor="#000000"
+                />
         </LinearLayout>
 
         <LinearLayout
@@ -72,13 +73,13 @@
                 android:layout_width="282dp"
                 android:layout_height="wrap_content"
                 android:text="@string/interests_gardening"
-                />
+                android:textColor="#000000" />
 
             <RadioButton
                 android:id="@+id/radioButton1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:checked="false"/>
+                android:textColor="#000000" />
         </LinearLayout>
 
     </LinearLayout>
@@ -89,12 +90,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
+        android:background="@android:color/holo_green_dark"
         android:text="confirm"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.959"
-        android:background="@drawable/radius"/>
+        app:layout_constraintVertical_bias="0.959" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
