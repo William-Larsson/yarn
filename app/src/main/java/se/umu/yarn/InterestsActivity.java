@@ -16,7 +16,7 @@ import java.util.List;
 
 import static android.util.Log.d;
 
-class InterestsActivity extends AppCompatActivity {
+public class InterestsActivity extends AppCompatActivity {
 
     RadioButton one, two, three, four;
 
