@@ -99,7 +99,9 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
             Log.d("myTag",account.getEmail() );
 
             // Signed in successfully, show authenticated UI.
-            //updateUI(account);
+            updateUI(account);
+
+
 
 
 
@@ -109,6 +111,15 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
             Log.w( "fail", "nånting gick fel ");
             //updateUI(null);
         }
+    }
+
+    private void updateUI(GoogleSignInAccount account) {
+
+        Intent intent = new Intent(this, MainActivity.class);
+
+        String fullName = account.getDisplayName();
+        intent.putExtra("se.umu.yarn.fullName", fullName);
+        startActivity(intent);
     }
 
 

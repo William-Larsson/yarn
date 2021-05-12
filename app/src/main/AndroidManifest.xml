@@ -16,9 +16,23 @@
         android:supportsRtl="true"
         android:usesCleartextTraffic="true"
         android:theme="@style/Theme.Yarn">
+
         <activity
             android:name=".SignInActivity"
-            android:label="Yarn">
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.SignIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
+        <activity
+            android:name=".InterestsActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.AddInterests" />
+            </intent-filter>
 
         </activity>
 
