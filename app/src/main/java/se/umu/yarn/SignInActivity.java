@@ -115,7 +115,7 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
 
     private void updateUI(GoogleSignInAccount account) {
 
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, InterestsActivity.class);
 
         String fullName = account.getDisplayName();
         intent.putExtra("se.umu.yarn.fullName", fullName);
