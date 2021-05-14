@@ -6,7 +6,7 @@ A video calling Android application for the elderly! 👴👵
 ### Trivia
 "Having a yarn" is Australian slang for having a conversation!
 
----
+
 ### Running local STUN-server
 To run a STUN-server locally on your machine, you need to install PeerJS
 > sudo npm i peer -g
