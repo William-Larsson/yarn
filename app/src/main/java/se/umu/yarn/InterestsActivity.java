@@ -28,7 +28,7 @@ public class InterestsActivity extends AppCompatActivity {
         BottomNavigationView navView = findViewById(R.id.nav_view);
 
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications)
+                R.id.navigation_interests, R.id.navigation_conversations, R.id.navigation_settings)
                 .build();
 
 

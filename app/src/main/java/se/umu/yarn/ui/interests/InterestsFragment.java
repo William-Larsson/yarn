@@ -23,13 +23,15 @@ public class InterestsFragment extends Fragment {
         interestsViewModel =
                 new ViewModelProvider(this).get(InterestsViewModel.class);
         View root = inflater.inflate(R.layout.fragment_interests, container, false);
-        final TextView textView = root.findViewById(R.id.mainView);
+
+        final TextView textView = root.findViewById(R.id.textView1);
         interestsViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);
             }
         });
+
         return root;
     }
 }

@@ -2,7 +2,7 @@
     <string name="app_name">Yarn</string>
     <string name="title_interests">Interests</string>
     <string name="title_conversations">Conversations</string>
-    <string name="title_settings">Notifications</string>
+    <string name="title_settings">Settings</string>
     <string name="interests_knitting">Knitting</string>
     <string name="interests_gardening">Gardening</string>
     <string name="interests_books">Books</string>
