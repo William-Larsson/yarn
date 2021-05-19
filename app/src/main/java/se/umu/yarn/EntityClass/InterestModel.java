@@ -6,8 +6,8 @@ import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
 @Entity(tableName = "interest")
-public class InterestModel {
 
+public class InterestModel {
 
     @PrimaryKey(autoGenerate = true)
     private int key;

@@ -312,8 +312,7 @@
                     app:layout_constraintHorizontal_bias="0.692"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.161"
-                    app:srcCompat="music_note" />
+                    app:layout_constraintVertical_bias="0.161"/>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
             <androidx.constraintlayout.widget.ConstraintLayout
