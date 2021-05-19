@@ -31,13 +31,13 @@
             <TextView
                 android:id="@+id/textView1"
                 android:layout_width="match_parent"
-                android:layout_height="55dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:paddingLeft="30dp"
                 android:paddingTop="30dp"
                 android:text="Join a conversation!"
                 android:textColor="#FFFFFF"
-                android:textSize="18sp"
+                android:textSize="26sp"
                 android:textStyle="bold" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -139,7 +139,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="112dp"
-                    android:text="Knitting"
+                    android:text="Nature"
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     android:textStyle="bold"
@@ -154,8 +154,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="36dp"
                     android:layout_marginBottom="24dp"
-                    android:background="#2196F3"
-                    android:text="Join!"
+                    android:background="@drawable/join_button"
+                    android:text="Join"
                     android:textColor="@color/black"
                     android:textSize="15sp"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -183,7 +183,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/ConstraintLayoutConvo_Rugby"
                 android:layout_width="match_parent"
-                android:layout_height="175dp"
+                android:layout_height="222dp"
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="30dp"
                 android:layout_marginRight="30dp"
@@ -208,7 +208,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="112dp"
-                    android:text="Knitting"
+                    android:text="Rugby"
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     android:textStyle="bold"
@@ -223,8 +223,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="36dp"
                     android:layout_marginBottom="24dp"
-                    android:background="#2196F3"
-                    android:text="Join!"
+                    android:background="@drawable/join_button"
+                    android:text="Join"
                     android:textColor="@color/black"
                     android:textSize="15sp"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -248,6 +248,7 @@
                     app:srcCompat="@drawable/rugby" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
+
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/ConstraintLayoutConvo_music"
                 android:layout_width="match_parent"
@@ -276,7 +277,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="112dp"
-                    android:text="Knitting"
+                    android:text="Music"
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     android:textStyle="bold"
@@ -291,14 +292,31 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="36dp"
                     android:layout_marginBottom="24dp"
-                    android:background="#2196F3"
-                    android:text="Join!"
+                    android:background="@drawable/join_button"
+                    android:text="Join"
                     android:textColor="@color/black"
                     android:textSize="15sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="1.0" />
+
+                <ImageView
+                    android:id="@+id/imageView_music"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintBottom_toTopOf="@+id/Info_text_music"
+                    app:layout_constraintEnd_toStartOf="@+id/Interest_text_music"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:srcCompat="@drawable/guitar"
+
+                    />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -329,7 +347,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="112dp"
-                    android:text="Knitting"
+                    android:text="Gardening"
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     android:textStyle="bold"
@@ -344,8 +362,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="36dp"
                     android:layout_marginBottom="24dp"
-                    android:background="#2196F3"
-                    android:text="Join!"
+                    android:background="@drawable/join_button"
+                    android:text="Join"
                     android:textColor="@color/black"
                     android:textSize="15sp"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -366,7 +384,65 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.161"
-                    app:srcCompat="@drawable/knitting" />
+                    app:srcCompat="@drawable/gardening" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ConstraintLayoutConvo_NewConvo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_weight="1"
+                android:background="@drawable/radius">
+
+
+                <TextView
+                    android:id="@+id/Info_text_NewConvo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="28dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="No one is talking about it "
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/Interest_text_NewConvo" />
+
+                <TextView
+                    android:id="@+id/Interest_text_NewConvo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="Start conversation about football "
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.237" />
+
+                <Button
+                    android:id="@+id/join_button_NewConvo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="36dp"
+                    android:layout_marginBottom="24dp"
+                    android:background="@drawable/join_button"
+                    android:text="New"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
