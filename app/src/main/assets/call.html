@@ -2,13 +2,16 @@
 <html>
     <head>
         <link href="./style.css" rel="stylesheet" />
-        <script defer src="./peerjs.js"></script>
-        <script defer src="./call.js"></script>
     </head>
     <body>
 
+        <script src="./peerjs.js"></script>
+
         <video class="secondary-video" autoplay id="remote-video"></video>
+        <!-- Muted - Don't play your own audio -->
         <video class="primary-video" autoplay muted id="local-video"></video>
+
+        <script src="./call.js"></script>
 
     </body>
 </html>

@@ -42,7 +42,6 @@ public class InterestsFragment extends Fragment {
                 new ViewModelProvider(this).get(InterestsViewModel.class);
         View root = inflater.inflate(R.layout.fragment_interests, container, false);
 
-
         final Button confirmButton = root.findViewById(R.id.confirmButton);
         confirmButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -59,9 +58,16 @@ public class InterestsFragment extends Fragment {
                 }
 
                 //"SELECT id FROM interests WHERE Name ='".$interests."'";
+        final TextView textView = root.findViewById(R.id.textView1);
+        interestsViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+            @Override
+            public void onChanged(@Nullable String s) {
+                textView.setText(s);
+
             }
 
         });
+
 
 
         one = root.findViewById(R.id.radioButton1);
@@ -167,6 +173,7 @@ public class InterestsFragment extends Fragment {
                 }
 
         });
+
 
 
         return root;

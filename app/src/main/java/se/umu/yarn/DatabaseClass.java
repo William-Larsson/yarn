@@ -1,6 +1,5 @@
 package se.umu.yarn;
 
-
 import android.content.Context;
 
 import androidx.annotation.NonNull;
@@ -77,3 +76,5 @@ public abstract class DatabaseClass extends RoomDatabase {
     };
 
 }
+
+

@@ -27,7 +27,6 @@ public interface DaoClass {
     void insert(InterestModel interestModel);
 
 
-
     @Query("SELECT * FROM interest ORDER BY name ASC")
     LiveData<List<InterestModel>> getAlphabetUsers();
 
@@ -36,9 +35,3 @@ public interface DaoClass {
 
 }
 
-
-/*@Dao
-public interface TestModelDao {
-    @Query("SELECT * FROM TestModel")
-    public List<TestModelWithBooks> loadTestModelsWithBooks();
-}*/
