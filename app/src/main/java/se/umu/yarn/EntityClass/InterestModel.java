@@ -1,25 +1,19 @@
 package se.umu.yarn.EntityClass;
 
+
 import androidx.room.ColumnInfo;
-import androidx.room.Embedded;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
-import androidx.room.Relation;
 
-import java.util.List;
+@Entity(tableName = "interest")
+public class InterestModel {
 
-@Entity(tableName = "user")
-
-public class UserModel {
 
     @PrimaryKey(autoGenerate = true)
     private int key;
 
     @ColumnInfo(name = "name")
     private String name;
-
-    @ColumnInfo(name = "interests")
-    private String interests;
 
     public int getKey() {
         return key;
@@ -37,13 +31,6 @@ public class UserModel {
         this.name = name;
     }
 
-    public String getInterests() {
-        return interests;
-    }
-
-    public void setInterests(String interests) {
-        this.interests = interests;
-    }
 }
 
 
