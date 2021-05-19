@@ -5,11 +5,11 @@
             android:shape="rectangle"
             android:useLevel="false">
             <solid android:color= "@android:color/transparent"/>
-            <stroke android:width="4dp" android:color="#D94F31"> </stroke>
+            <stroke android:width="@dimen/btn_stroke_width" android:color="@color/yarn_orange"> </stroke>
             <size
                 android:width="100dp"
                 android:height="50dp" />
-            <corners android:radius="7dp"></corners>
+            <corners android:radius="@dimen/btn_corner_radius"></corners>
         </shape>
     </item>
 </layer-list>

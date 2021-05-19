@@ -1,7 +1,7 @@
 package se.umu.yarn
 
 import android.annotation.SuppressLint
-import androidx.appcompat.app.AppCompatActivity
+import android.content.DialogInterface
 import android.os.Bundle
 import android.view.View
 import android.webkit.PermissionRequest
@@ -9,6 +9,8 @@ import android.webkit.WebChromeClient
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.ValueEventListener
@@ -17,6 +19,7 @@ import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_call.*
 import se.umu.yarn.model.JavascriptInterface
 import java.util.*
+
 
 /**
  * Activity for handling an ongoing call between peers.
@@ -53,12 +56,32 @@ class CallActivity : AppCompatActivity() {
             useMic = !useMic
             callJavascriptFunction("javascript:toggleAudio(\"${useMic}\")")
             toggleMicBtn.setImageResource(if (useMic) R.drawable.ic_mic else R.drawable.ic_mic_off )
+            toggleMicText.setText(if (useMic) R.string.mic_on else R.string.mic_off)
         }
 
+        // Call underlying call.js function for toggling the local video stream
         toggleVideoBtn.setOnClickListener {
             useVideo = !useVideo
             callJavascriptFunction("javascript:toggleVideo(\"${useVideo}\")")
             toggleVideoBtn.setImageResource(if (useVideo) R.drawable.ic_videocam else R.drawable.ic_videocam_off )
+            toggleVideoText.setText(if (useVideo) R.string.video_on else R.string.video_off)
+        }
+
+        sendPhotoBtn.setOnClickListener {
+            Toast.makeText(this, "Sorry, sending photos is not supported right now!", Toast.LENGTH_LONG).show()
+        }
+
+        // When pressed, ask if user really wants to end the call
+        endCallBtn.setOnClickListener {
+            val builder: AlertDialog.Builder = AlertDialog.Builder(this)
+            builder.setCancelable(true)
+            builder.setTitle("End call?")
+            builder.setMessage("Are you sure you want to end the call?")
+            // if positive, finish the activity, else do nothing.
+            builder.setPositiveButton("Confirm") { _, _ -> finish() }
+            builder.setNegativeButton(android.R.string.cancel) { _, _ -> }
+            val dialog: AlertDialog = builder.create()
+            dialog.show()
         }
 
         setupWebView()
@@ -231,7 +254,7 @@ class CallActivity : AppCompatActivity() {
      * it's done and should be closed.
      */
     override fun onBackPressed() {
-        finish()
+        //finish()
     }
 
     /**

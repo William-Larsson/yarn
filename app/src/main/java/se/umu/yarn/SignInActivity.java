@@ -79,7 +79,7 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        Log.d("Activity resukt", "Inne i activity result: " + requestCode );
+        Log.d("Activity result", "onActivityResult Request code: " + requestCode );
 
         // Result returned from launching the Intent from GoogleSignInClient.getSignInIntent(...);
         if (requestCode == 15) {
@@ -101,10 +101,6 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
             // Signed in successfully, show authenticated UI.
             updateUI(account);
 
-
-
-
-
         } catch (ApiException e) {
             // The ApiException status code indicates the detailed failure reason.
             // Please refer to the GoogleSignInStatusCodes class reference for more information.
@@ -113,14 +109,13 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
         }
     }
 
+    /**
+     * Start MainActivity and pall along the users account details
+     * @param account = the users account details.
+     */
     private void updateUI(GoogleSignInAccount account) {
-
         Intent intent = new Intent(this, MainActivity.class);
-
-        String fullName = account.getDisplayName();
-        intent.putExtra("se.umu.yarn.fullName", fullName);
+        intent.putExtra("se.umu.yarn.account", account);
         startActivity(intent);
     }
-
-
 }
