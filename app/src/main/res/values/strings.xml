@@ -7,4 +7,14 @@
     <string name="interests_gardening">Gardening</string>
     <string name="interests_books">Books</string>
     <string name="interests_movies">Movies</string>
+    <string name="toggle_video_camera">Toggle your video camera on or off</string>
+    <string name="video_on">Video on</string>
+    <string name="video_off">Video off</string>
+    <string name="toggle_microphone">Toggle your microphone on or off</string>
+    <string name="send_a_photograph">Send a photograph</string>
+    <string name="send_photo">Send photo</string>
+    <string name="end_the_call">End the call</string>
+    <string name="end_call">End call</string>
+    <string name="mic_on">Mic on</string>
+    <string name="mic_off">Mic off</string>
 </resources>

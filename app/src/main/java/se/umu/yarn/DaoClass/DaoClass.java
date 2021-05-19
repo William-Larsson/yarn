@@ -8,27 +8,26 @@ import androidx.room.Query;
 
 import java.util.List;
 
-import se.umu.yarn.EntityClass.InterestModel;
 import se.umu.yarn.EntityClass.UserModel;
 
 @Dao
 public interface DaoClass {
 
     @Insert
-    void insertAllData(InterestModel interestModel);
+    void insertAllData(UserModel user);
 
-    @Query("select * from interest")
-    List<InterestModel> getAllData();
+    @Query("select * from user")
+    List<UserModel> getAllData();
 
-    @Query("DELETE FROM interest")
+    @Query("DELETE FROM user")
     void deleteAll();
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
-    void insert(InterestModel interestModel);
+    void insert(UserModel user);
 
 
-    @Query("SELECT * FROM interest ORDER BY name ASC")
-    LiveData<List<InterestModel>> getAlphabetUsers();
+    @Query("SELECT * FROM user ORDER BY name ASC")
+    LiveData<List<UserModel>> getAlphabetUsers();
 
 
 
