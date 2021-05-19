@@ -10,7 +10,8 @@ import se.umu.yarn.DaoClass.DaoClass;
 import se.umu.yarn.EntityClass.InterestModel;
 import se.umu.yarn.EntityClass.UserModel;
 
-class WordRepository {
+class DataRepo
+{
 
     private DaoClass interestData;
     private LiveData<List<InterestModel>> allInterests;
@@ -19,7 +20,7 @@ class WordRepository {
     // dependency. This adds complexity and much more code, and this sample is not about testing.
     // See the BasicSample in the android-architecture-components repository at
     // https://github.com/googlesamples
-    WordRepository(Application application) {
+    DataRepo(Application application) {
         DatabaseClass db = DatabaseClass.getDatabase(application);
         interestData = db.getDao();
         allInterests = interestData.getAlphabetUsers();
