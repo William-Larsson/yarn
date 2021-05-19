@@ -58,113 +58,113 @@ public class InterestsFragment extends Fragment {
                 }
 
 
-            }
+                    }
 
-        });
-
-
-        one = root.findViewById(R.id.radioButton1);
-        two = root.findViewById(R.id.radioButton2);
-        three = root.findViewById(R.id.radioButton3);
-        four = root.findViewById(R.id.radioButton4);
+                });
 
 
-        final boolean[] one_check = {one.isChecked()};
-
-        one.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                TextView interests = root.findViewById(R.id.textView2);
-                String interest = (String) interests.getText();
-                d("Alice", "Clicked radio" + interest);
-                d("Alice", "isChecked? " + one_check);
+                one = root.findViewById(R.id.radioButton1);
+                two = root.findViewById(R.id.radioButton2);
+                three = root.findViewById(R.id.radioButton3);
+                four = root.findViewById(R.id.radioButton4);
 
 
-                if (one_check[0]) {
-                    one.setChecked(false);
-                    one_check[0] = false;
-                    int i = interestList.indexOf(interest);
-                    interestList.remove(i);
-                    d("Alice", "Index: " + i);
+                final boolean[] one_check = {one.isChecked()};
 
-                } else {
-                    one.setChecked(true);
-                    one_check[0] = true;
-                    interestList.add(interest);
-                }
-
-                d("Alice", "List: " + interestList);
-
-                //Get all the checked boxes and insert into database
-
-                //"SELECT id FROM interests WHERE Name ='".$interests."'";
-            }
-
-        });
-
-        final boolean[] two_check = {two.isChecked()};
-
-        two.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                TextView interests = root.findViewById(R.id.textView3);
-                String interest = (String) interests.getText();
-                d("Alice", "Clicked radio" + interest);
-                d("Alice", "isChecked? " + one_check);
+                one.setOnClickListener(new View.OnClickListener() {
+                    public void onClick(View v) {
+                        TextView interests = root.findViewById(R.id.textView2);
+                        String interest = (String) interests.getText();
+                        d("Alice", "Clicked radio" + interest);
+                        d("Alice", "isChecked? " + one_check);
 
 
-                if (two_check[0]) {
-                    two.setChecked(false);
-                    two_check[0] = false;
-                    int i = interestList.indexOf(interest);
-                    interestList.remove(i);
-                    d("Alice", "Index: " + i);
+                        if (one_check[0]) {
+                            one.setChecked(false);
+                            one_check[0] = false;
+                            int i = interestList.indexOf(interest);
+                            interestList.remove(i);
+                            d("Alice", "Index: " + i);
 
-                } else {
-                    two.setChecked(true);
-                    two_check[0] = true;
-                    interestList.add(interest);
-                }
+                        } else {
+                            one.setChecked(true);
+                            one_check[0] = true;
+                            interestList.add(interest);
+                        }
 
-                d("Alice", "List: " + interestList);
+                        d("Alice", "List: " + interestList);
 
-                //Get all the checked boxes and insert into database
+                        //Get all the checked boxes and insert into database
 
-                //"SELECT id FROM interests WHERE Name ='".$interests."'";
-            }
-        });
+                        //"SELECT id FROM interests WHERE Name ='".$interests."'";
+                    }
 
-        final boolean[] three_check = {three.isChecked()};
+                });
 
-        three.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                TextView interests = root.findViewById(R.id.textView4);
-                String interest = (String) interests.getText();
-                d("Alice", "Clicked radio" + interest);
-                d("Alice", "isChecked? " + one_check);
+                final boolean[] two_check = {two.isChecked()};
+
+                two.setOnClickListener(new View.OnClickListener() {
+                    public void onClick(View v) {
+                        TextView interests = root.findViewById(R.id.textView3);
+                        String interest = (String) interests.getText();
+                        d("Alice", "Clicked radio" + interest);
+                        d("Alice", "isChecked? " + one_check);
 
 
-                if (three_check[0]) {
-                    three.setChecked(false);
-                    three_check[0] = false;
-                    int i = interestList.indexOf(interest);
-                    interestList.remove(i);
-                    d("Alice", "Index: " + i);
+                        if (two_check[0]) {
+                            two.setChecked(false);
+                            two_check[0] = false;
+                            int i = interestList.indexOf(interest);
+                            interestList.remove(i);
+                            d("Alice", "Index: " + i);
 
-                } else {
-                    three.setChecked(true);
-                    three_check[0] = true;
-                    interestList.add(interest);
-                }
+                        } else {
+                            two.setChecked(true);
+                            two_check[0] = true;
+                            interestList.add(interest);
+                        }
 
-                d("Alice", "List: " + interestList);
+                        d("Alice", "List: " + interestList);
 
-                //Get all the checked boxes and insert into database
+                        //Get all the checked boxes and insert into database
 
-                //"SELECT id FROM interests WHERE Name ='".$interests."'";
-            }
+                        //"SELECT id FROM interests WHERE Name ='".$interests."'";
+                    }
+                });
 
-        });
+                final boolean[] three_check = {three.isChecked()};
 
-        return root;
-    }
+                three.setOnClickListener(new View.OnClickListener() {
+                    public void onClick(View v) {
+                        TextView interests = root.findViewById(R.id.textView4);
+                        String interest = (String) interests.getText();
+                        d("Alice", "Clicked radio" + interest);
+                        d("Alice", "isChecked? " + one_check);
 
-}
+
+                        if (three_check[0]) {
+                            three.setChecked(false);
+                            three_check[0] = false;
+                            int i = interestList.indexOf(interest);
+                            interestList.remove(i);
+                            d("Alice", "Index: " + i);
+
+                        } else {
+                            three.setChecked(true);
+                            three_check[0] = true;
+                            interestList.add(interest);
+                        }
+
+                        d("Alice", "List: " + interestList);
+
+                        //Get all the checked boxes and insert into database
+
+                        //"SELECT id FROM interests WHERE Name ='".$interests."'";
+                    }
+
+                });
+
+             return root;
+        }
+
+        }

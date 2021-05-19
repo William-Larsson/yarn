@@ -61,16 +61,16 @@ public abstract class DatabaseClass extends RoomDatabase {
                 DaoClass dao = INSTANCE.getDao();
                 dao.deleteAll();
 
-                InterestModel interestModel = new InterestModel();
-                interestModel.setName("Knitting");
+                UserModel user = new UserModel();
+                user.setName("Knitting");
                 //RAndom
                 Random rand = new Random();
                 int randomNum = rand.nextInt((0 - 9999) + 1) + 0;
 
-                interestModel.setKey(randomNum);
-                dao.insert(interestModel);
-                interestModel = new InterestModel();
-                dao.insert(interestModel);
+                user.setKey(randomNum);
+                dao.insert(user);
+                user = new UserModel();
+                dao.insert(user);
             });
         }
     };
