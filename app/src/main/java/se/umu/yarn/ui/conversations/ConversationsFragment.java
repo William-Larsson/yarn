@@ -7,13 +7,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
+
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 
 import se.umu.yarn.CallActivity;
 import se.umu.yarn.R;
@@ -21,27 +20,26 @@ import se.umu.yarn.R;
 public class ConversationsFragment extends Fragment {
 
     private ConversationsViewModel conversationsViewModel;
-    private EditText usernameInputText;
     private Button usernameSubmitBtn;
+    private GoogleSignInAccount account;
 
     public View onCreateView(
             @NonNull LayoutInflater inflater,
             ViewGroup container,
             Bundle savedInstanceState)
     {
+        account = requireActivity().getIntent().getParcelableExtra("se.umu.yarn.account");
+
         conversationsViewModel =
                 new ViewModelProvider(this).get(ConversationsViewModel.class);
 
         View root = inflater.inflate(R.layout.fragment_conversations, container, false);
 
-        // TODO: Change later. Use username from OAuth login etc..
-        usernameInputText = root.findViewById(R.id.usernameEdit);
-        usernameSubmitBtn = root.findViewById(R.id.submitBtn);
-
+        usernameSubmitBtn = root.findViewById(R.id.startChatBtn);
         usernameSubmitBtn.setOnClickListener(view -> {
-            String username = usernameInputText.getText().toString();
             Intent intent = new Intent(requireContext(), CallActivity.class);
-            intent.putExtra("username", username);
+            // TODO: change to account ID ?
+            intent.putExtra("username", account.getDisplayName());
             startActivity(intent);
         });
 
