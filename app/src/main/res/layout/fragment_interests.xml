@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.interests.InterestsFragment"
-    android:fitsSystemWindows="true">
+    android:fitsSystemWindows="true"
+    android:background="@drawable/background_gradient">
 
 
     <Button
@@ -29,7 +30,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        tools:ignore="MissingConstraints">
+        tools:ignore="MissingConstraints"
+        >
 
 
         <TextView
@@ -59,14 +61,14 @@
 
             <TextView
                 android:id="@+id/textView2"
-                android:layout_width="wrap_content"
+                android:layout_width="244dp"
                 android:layout_height="wrap_content"
                 android:text="@string/interests_knitting"
                 android:textColor="#000000" />
 
             <RadioButton
                 android:id="@+id/radioButton1"
-                android:layout_width="wrap_content"
+                android:layout_width="281dp"
                 android:layout_height="wrap_content"
                 android:textColor="#000000" />
         </LinearLayout>
@@ -87,7 +89,7 @@
 
             <TextView
                 android:id="@+id/textView3"
-                android:layout_width="wrap_content"
+                android:layout_width="243dp"
                 android:layout_height="wrap_content"
                 android:text="@string/interests_movies"
                 android:textColor="#000000" />
@@ -115,7 +117,7 @@
 
             <TextView
                 android:id="@+id/textView4"
-                android:layout_width="wrap_content"
+                android:layout_width="243dp"
                 android:layout_height="wrap_content"
                 android:text="@string/interests_books"
                 android:textColor="#000000" />
@@ -143,7 +145,7 @@
 
             <TextView
                 android:id="@+id/textView5"
-                android:layout_width="wrap_content"
+                android:layout_width="243dp"
                 android:layout_height="wrap_content"
                 android:text="@string/interests_gardening"
                 android:textColor="#000000" />

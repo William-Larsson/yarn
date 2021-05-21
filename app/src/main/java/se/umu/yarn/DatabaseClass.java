@@ -61,7 +61,7 @@ public abstract class DatabaseClass extends RoomDatabase {
                 DaoClass dao = INSTANCE.getDao();
                 dao.deleteAll();
 
-                UserModel user = new UserModel();
+                /*UserModel user = new UserModel();
                 user.setName("Knitting");
                 //RAndom
                 Random rand = new Random();
@@ -70,7 +70,7 @@ public abstract class DatabaseClass extends RoomDatabase {
                 user.setKey(randomNum);
                 dao.insert(user);
                 user = new UserModel();
-                dao.insert(user);
+                dao.insert(user);*/
             });
         }
     };

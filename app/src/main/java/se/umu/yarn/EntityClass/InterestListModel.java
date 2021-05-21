@@ -13,7 +13,7 @@ public class InterestListModel {
         public UserModel testModel;
 
         @Relation(parentColumn = "id", entityColumn = "testModelId", entity = InterestModel.class)
-        public List<InterestModel> interestList;
+        public List<String> interestList;
 
 
     public UserModel getTestModel() {
@@ -24,11 +24,11 @@ public class InterestListModel {
         this.testModel = testModel;
     }
 
-    public List<InterestModel> getInterestList() {
+    public List<String> getInterestList() {
         return interestList;
     }
 
-    public void setInterestList(List<InterestModel> interestList) {
+    public void setInterestList(List<String> interestList) {
         this.interestList = interestList;
     }
 }
