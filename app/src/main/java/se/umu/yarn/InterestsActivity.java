@@ -92,11 +92,11 @@ public class InterestsActivity extends AppCompatActivity {
         String interests = one.getText().toString().trim();
 
         UserModel user = new UserModel();
-        InterestModel interest = new InterestModel();
+        //InterestModel interest = new InterestModel();
 
         user.setName("Alice");
 
-        DatabaseClass.getDatabase(getApplicationContext()).getDao().insert(interest);
+        DatabaseClass.getDatabase(getApplicationContext()).getDao().insert(user);
         Toast.makeText(this, "Data success", Toast.LENGTH_SHORT).show();
 
     }

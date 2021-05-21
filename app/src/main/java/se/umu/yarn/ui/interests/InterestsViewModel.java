@@ -13,6 +13,11 @@ public class InterestsViewModel extends ViewModel {
         mText.setValue("This is interests fragment");
     }
 
+    public void sendData(){
+
+
+    }
+
     public LiveData<String> getText() {
         return mText;
     }

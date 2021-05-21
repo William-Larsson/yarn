@@ -6,7 +6,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.EditText;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -20,7 +19,7 @@ import se.umu.yarn.R;
 public class ConversationsFragment extends Fragment {
 
     private ConversationsViewModel conversationsViewModel;
-    private Button usernameSubmitBtn;
+    private Button NewConvoBtn;
     private GoogleSignInAccount account;
 
     public View onCreateView(
@@ -33,10 +32,10 @@ public class ConversationsFragment extends Fragment {
         conversationsViewModel =
                 new ViewModelProvider(this).get(ConversationsViewModel.class);
 
-        View root = inflater.inflate(R.layout.fragment_conversations, container, false);
+        View root = inflater.inflate(R.layout.fragment_convo, container, false);
 
-        usernameSubmitBtn = root.findViewById(R.id.startChatBtn);
-        usernameSubmitBtn.setOnClickListener(view -> {
+        NewConvoBtn = root.findViewById(R.id.join_button_NewConvo);
+        NewConvoBtn.setOnClickListener(view -> {
             Intent intent = new Intent(requireContext(), CallActivity.class);
             // TODO: change to account ID ?
             intent.putExtra("username", account.getDisplayName());
