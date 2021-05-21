@@ -44,6 +44,11 @@ public class UserModel {
     public void setInterests(String interests) {
         this.interests = interests;
     }
+
+    public UserModel(String name, String interests) {
+        this.name = name;
+        this.interests = interests;
+    }
 }
 
 
