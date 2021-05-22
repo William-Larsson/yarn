@@ -1,7 +1,9 @@
 package se.umu.yarn.ui.interests;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.provider.ContactsContract;
+import android.telecom.Call;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,10 +22,15 @@ import androidx.room.Room;
 import java.util.ArrayList;
 import java.util.List;
 
+import se.umu.yarn.CallActivity;
 import se.umu.yarn.DatabaseClass;
+import se.umu.yarn.EntityClass.InterestListModel;
 import se.umu.yarn.EntityClass.UserModel;
+import se.umu.yarn.InterestsActivity;
+import se.umu.yarn.MainActivity;
 import se.umu.yarn.R;
 
+import static android.provider.AlarmClock.EXTRA_MESSAGE;
 import static android.util.Log.d;
 
 public class InterestsFragment extends Fragment {
@@ -42,7 +49,9 @@ public class InterestsFragment extends Fragment {
                 new ViewModelProvider(this).get(InterestsViewModel.class);
         View root = inflater.inflate(R.layout.fragment_interests, container, false);
 
+
         final Button confirmButton = root.findViewById(R.id.confirmButton);
+        d("Alice", "Start fragment");
         confirmButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 d("Alice", "Clicked");
@@ -57,8 +66,31 @@ public class InterestsFragment extends Fragment {
                     d("Alice", "NAme: " + name);
                 }
 
+                InterestListModel interestListModel = new InterestListModel();
+                interestListModel.setInterestList(interestList);
+                UserModel user = new UserModel("Alice", "Trees");
+                user.setName("Alice");
+                d("Alice", "UserKey: " + user.getKey());
+                UserModel user1 = new UserModel("Agnes", "Gardening");
+                user1.setName("Agnes");
+                d("Alice", "UserKey1: " + user.getKey());
+
+                List<String> test = interestListModel.getInterestList();
+                for (int i = 0; i < test.size(); i++) {
+                    //INSERT INTO table (interests)
+                    //VALUES ($name);
+
+                    String name = test.get(i);
+                    d("Alice", " test Name: " + name);
+                }
+
+                /*Intent intent = new Intent(String.valueOf(InterestsActivity.class));
+                intent.putExtra(EXTRA_MESSAGE, "user");
+                startActivity(intent);*/
 
                     }
+
+
 
                 });
 
@@ -164,7 +196,40 @@ public class InterestsFragment extends Fragment {
 
                 });
 
+        final boolean[] four_check = {four.isChecked()};
+
+        four.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                TextView interests = root.findViewById(R.id.textView5);
+                String interest = (String) interests.getText();
+                d("Alice", "Clicked radio" + interest);
+                d("Alice", "isChecked? " + four_check);
+
+
+                if (four_check[0]) {
+                    four.setChecked(false);
+                    four_check[0] = false;
+                    int i = interestList.indexOf(interest);
+                    interestList.remove(i);
+                    d("Alice", "Index: " + i);
+
+                } else {
+                    four.setChecked(true);
+                    four_check[0] = true;
+                    interestList.add(interest);
+                }
+
+                d("Alice", "List: " + interestList);
+
+                //Get all the checked boxes and insert into database
+
+                //"SELECT id FROM interests WHERE Name ='".$interests."'";
+            }
+        });
+
              return root;
         }
+
+
 
         }
