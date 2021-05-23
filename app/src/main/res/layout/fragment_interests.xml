@@ -33,29 +33,28 @@
         tools:ignore="MissingConstraints"
         >
 
-
         <TextView
             android:id="@+id/textView1"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:paddingLeft="30dp"
-            android:paddingTop="30dp"
+            android:layout_margin="30dp"
             android:text="Choose your interests!"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+            android:textColor="#FFFFFF"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/josefinsans_regular"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginLeft="30dp"
-            android:layout_marginTop="30dp"
             android:layout_marginRight="30dp"
             android:layout_weight="1"
             android:background="@drawable/radius"
             android:orientation="horizontal"
             android:padding="20dp"
-
+            android:elevation="5dp"
             >
 
 
@@ -64,11 +63,13 @@
                 android:layout_width="244dp"
                 android:layout_height="wrap_content"
                 android:text="@string/interests_knitting"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:fontFamily="@font/josefinsans_regular"
+                android:textSize="20sp"/>
 
             <RadioButton
                 android:id="@+id/radioButton1"
-                android:layout_width="281dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="#000000" />
         </LinearLayout>
@@ -83,7 +84,7 @@
             android:background="@drawable/radius"
             android:orientation="horizontal"
             android:padding="20dp"
-
+            android:elevation="5dp"
             >
 
 
@@ -92,7 +93,9 @@
                 android:layout_width="243dp"
                 android:layout_height="wrap_content"
                 android:text="@string/interests_movies"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:fontFamily="@font/josefinsans_regular"
+                android:textSize="20sp"/>
 
             <RadioButton
                 android:id="@+id/radioButton2"
@@ -111,7 +114,7 @@
             android:background="@drawable/radius"
             android:orientation="horizontal"
             android:padding="20dp"
-
+            android:elevation="5dp"
             >
 
 
@@ -120,7 +123,9 @@
                 android:layout_width="243dp"
                 android:layout_height="wrap_content"
                 android:text="@string/interests_books"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:fontFamily="@font/josefinsans_regular"
+                android:textSize="20sp"/>
 
             <RadioButton
                 android:id="@+id/radioButton3"
@@ -135,11 +140,12 @@
             android:layout_marginLeft="30dp"
             android:layout_marginTop="30dp"
             android:layout_marginRight="30dp"
+            android:layout_marginBottom="30dp"
             android:layout_weight="1"
             android:background="@drawable/radius"
             android:orientation="horizontal"
             android:padding="20dp"
-
+            android:elevation="5dp"
             >
 
 
@@ -148,7 +154,9 @@
                 android:layout_width="243dp"
                 android:layout_height="wrap_content"
                 android:text="@string/interests_gardening"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:fontFamily="@font/josefinsans_regular"
+                android:textSize="20sp"/>
 
             <RadioButton
                 android:id="@+id/radioButton4"
