@@ -17,6 +17,7 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.ValueEventListener
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
+import kotlinx.android.synthetic.main.fragment_conversations.*
 import kotlinx.android.synthetic.main.fragment_convo.joinNewConversationBtn
 import se.umu.yarn.CallActivity
 import se.umu.yarn.R
@@ -53,7 +54,7 @@ class ConversationsFragment : Fragment() {
         joinNewConversationBtn.setOnClickListener {
             val intent = Intent(requireContext(), CallActivity::class.java)
             intent.putExtra("account", account)
-            intent.putExtra("conversationTopic", "Football")
+            intent.putExtra("conversationTopic", "Gardening")
             intent.putExtra("isNewConversation", true)
             startActivity(intent)
         }
@@ -63,31 +64,26 @@ class ConversationsFragment : Fragment() {
      * Listen for changes in the Firebase database.
      */
     private fun setupFirebaseListeners() {
-        // TODO: testing that i can access the topic ids.
-        firebaseRef.child("Football").addListenerForSingleValueEvent(object: ValueEventListener {
+        firebaseRef.child("Gardening").addListenerForSingleValueEvent(object: ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 if (snapshot.value != null) {
-                    val builder: AlertDialog.Builder = AlertDialog.Builder(requireContext())
-                    builder.setCancelable(true)
-                    builder.setTitle("Start call?")
-                    builder.setMessage("Start call with topic Football?")
-                    builder.setPositiveButton("Confirm") { _, _ ->
+                    // TODO: Change this solution to a RecyclerView if expanded upon.
+                    gardeningLayout.visibility = View.VISIBLE
+                    gardeningNewConvoLayout.visibility = View.GONE
+
+                    gardeningJoinBtn.setOnClickListener {
                         val intent = Intent(requireContext(), CallActivity::class.java)
                         intent.putExtra("account", account)
-                        intent.putExtra("conversationTopic", "Football")
+                        intent.putExtra("conversationTopic", "Gardening")
                         intent.putExtra("isNewConversation", false)
                         // TODO: NOTE! This works for getting a room key (assuming only one room open)
                         intent.putExtra("roomId", snapshot.children.elementAt(0).key.toString())
                         startActivity(intent)
                     }
-                    builder.setNegativeButton(android.R.string.cancel) { _, _ -> }
-                    val dialog: AlertDialog = builder.create()
-                    dialog.show()
-                }
+                } else setupFirebaseListeners()
             }
 
             override fun onCancelled(error: DatabaseError) {}
-
         })
     }
 }
