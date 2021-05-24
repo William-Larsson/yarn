@@ -13,22 +13,18 @@ import java.util.List;
 
 public class UserModel {
 
-    /*@PrimaryKey(autoGenerate = true)
+    @PrimaryKey(autoGenerate = true)
     private int key;
-
+/*
     @ColumnInfo(name = "name")
     private String name;
 
     @ColumnInfo(name = "interests")
     private String interests;
 
-    public int getKey() {
-        return key;
-    }
 
-    public void setKey(int key) {
-        this.key = key;
-    }
+
+
 
     public String getName() {
         return name;
@@ -45,13 +41,21 @@ public class UserModel {
     public void setInterests(String interests) {
         this.interests = interests;
     }*/
+
+    public int getKey() {
+        return key;
+    }
+
+    public void setKey(int key) {
+        this.key = key;
+    }
     String name;
-    ArrayList interests;
+    String interests;
 
     public UserModel(){
 
     }
-    public UserModel(String name, ArrayList interests) {
+    public UserModel(String name, String interests) {
         this.name = name;
         this.interests = interests;
     }
@@ -64,11 +68,11 @@ public class UserModel {
         this.name = name;
     }
 
-    public ArrayList getInterests() {
+    public String getInterests() {
         return interests;
     }
 
-    public void setInterests(ArrayList interests) {
+    public void setInterests(String interests) {
         this.interests = interests;
     }
 }

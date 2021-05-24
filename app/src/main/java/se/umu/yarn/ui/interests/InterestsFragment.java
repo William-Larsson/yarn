@@ -31,6 +31,8 @@ import se.umu.yarn.EntityClass.UserModel;
 import se.umu.yarn.InterestsActivity;
 import se.umu.yarn.MainActivity;
 import se.umu.yarn.R;
+import se.umu.yarn.ui.conversations.ConversationsFragment;
+import se.umu.yarn.ui.settings.SettingsFragment;
 
 import static android.provider.AlarmClock.EXTRA_MESSAGE;
 import static android.util.Log.d;
@@ -42,7 +44,7 @@ public class InterestsFragment extends Fragment {
     //Get interests from database and add it into the textViews.
 
     private InterestsViewModel interestsViewModel;
-    RadioButton one, two, three, four;
+    RadioButton one, two, three, four, five, six;
     ArrayList<String> interestList = new ArrayList<>();
     private GoogleSignInAccount account;
 
@@ -54,9 +56,12 @@ public class InterestsFragment extends Fragment {
         account = requireActivity().getIntent().getParcelableExtra("se.umu.yarn.account");
 
         UserModel user = new UserModel();
-        d("Alice" , account.getDisplayName());
 
-        user.setName(account.getDisplayName());
+        TextView textView = root.findViewById(R.id.textView1);
+        textView.setText("Hello " + account.getDisplayName() + " choose your interests!");
+        //d("Alice" , account.getDisplayName());
+
+        //user.setName(account.getDisplayName());
 
 
         final Button confirmButton = root.findViewById(R.id.confirmButton);
@@ -88,20 +93,19 @@ public class InterestsFragment extends Fragment {
                     d("Alice", " test Name: " + name);
                 }
 
-                user.setInterests( interestList);
+                //user.setInterests( interestList);
 
-
-
-
-                /*Intent intent = new Intent(this, MainActivity.class);
+                SettingsFragment fragment = new SettingsFragment();
                 Bundle bundle = new Bundle();
-                bundle.putParcelableArrayList("mylist", arraylist);
-                intent.putExtras(bundle);
-                this.startActivity(intent);*/
+                bundle.putStringArrayList("listan", interestList);
+                fragment.setArguments(bundle);
+
+                d("Alice", bundle.toString());
+
+                d("Alice" , "test");
+
 
                     }
-
-
 
                 });
 
@@ -110,6 +114,8 @@ public class InterestsFragment extends Fragment {
                 two = root.findViewById(R.id.radioButton2);
                 three = root.findViewById(R.id.radioButton3);
                 four = root.findViewById(R.id.radioButton4);
+                five = root.findViewById(R.id.radioButton5);
+                six = root.findViewById(R.id.radioButton6);
 
 
                 final boolean[] one_check = {one.isChecked()};
@@ -227,6 +233,66 @@ public class InterestsFragment extends Fragment {
                 } else {
                     four.setChecked(true);
                     four_check[0] = true;
+                    interestList.add(interest);
+                }
+
+                d("Alice", "List: " + interestList);
+
+                //Get all the checked boxes and insert into database
+
+                //"SELECT id FROM interests WHERE Name ='".$interests."'";
+            }
+        });
+        final boolean[] five_check = {five.isChecked()};
+
+        five.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                TextView interests = root.findViewById(R.id.textView6);
+                String interest = (String) interests.getText();
+                d("Alice", "Clicked radio" + interest);
+                d("Alice", "isChecked? " + five_check);
+
+
+                if (five_check[0]) {
+                    five.setChecked(false);
+                    five_check[0] = false;
+                    int i = interestList.indexOf(interest);
+                    interestList.remove(i);
+                    d("Alice", "Index: " + i);
+
+                } else {
+                    five.setChecked(true);
+                    five_check[0] = true;
+                    interestList.add(interest);
+                }
+
+                d("Alice", "List: " + interestList);
+
+                //Get all the checked boxes and insert into database
+
+                //"SELECT id FROM interests WHERE Name ='".$interests."'";
+            }
+        });
+        final boolean[] six_check = {six.isChecked()};
+
+        six.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                TextView interests = root.findViewById(R.id.textView7);
+                String interest = (String) interests.getText();
+                d("Alice", "Clicked radio" + interest);
+                d("Alice", "isChecked? " + six_check);
+
+
+                if (six_check[0]) {
+                    six.setChecked(false);
+                    six_check[0] = false;
+                    int i = interestList.indexOf(interest);
+                    interestList.remove(i);
+                    d("Alice", "Index: " + i);
+
+                } else {
+                    six.setChecked(true);
+                    six_check[0] = true;
                     interestList.add(interest);
                 }
 

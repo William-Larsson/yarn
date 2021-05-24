@@ -28,13 +28,137 @@
                 android:id="@+id/textView1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:layout_margin="30dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/josefinsans_regular"
                 android:text="@string/join_a_conversation"
                 android:textColor="#FFFFFF"
                 android:textSize="26sp"
-                android:textStyle="bold"
-                android:fontFamily="@font/josefinsans_regular"/>
+                android:textStyle="bold" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/gardeningNewConvoLayout5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="16dp"
+                android:layout_weight="1"
+                android:background="@drawable/radius"
+                android:elevation="5dp">
+
+
+                <TextView
+                    android:id="@+id/gardeningNewConvoText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/josefinsans_regular"
+                    android:text="@string/no_one_talking"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/gardeningNewConvoHeadline" />
+
+                <TextView
+                    android:id="@+id/gardeningNewConvoHeadline"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:fontFamily="@font/josefinsans_bold"
+                    android:text="@string/start_conv_gardening"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.237" />
+
+                <Button
+                    android:id="@+id/joinNewConversationBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginBottom="24dp"
+                    android:background="@drawable/join_button"
+                    android:fontFamily="@font/josefinsans_bold"
+                    android:text="@string/start"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/gardeningNewConvoLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="16dp"
+                android:layout_weight="1"
+                android:background="@drawable/radius"
+                android:elevation="5dp">
+
+
+                <TextView
+                    android:id="@+id/gardeningNewConvoText2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/josefinsans_regular"
+                    android:text="@string/no_one_talking"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/gardeningNewConvoHeadline2" />
+
+                <TextView
+                    android:id="@+id/gardeningNewConvoHeadline2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:fontFamily="@font/josefinsans_bold"
+                    android:text="@string/start_conv_rugby"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.237" />
+
+                <Button
+                    android:id="@+id/joinNewConversationBtn2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginBottom="24dp"
+                    android:background="@drawable/join_button"
+                    android:fontFamily="@font/josefinsans_bold"
+                    android:text="@string/start"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <!--            <androidx.constraintlayout.widget.ConstraintLayout-->
             <!--                android:id="@+id/ConstraintLayoutKnitting"-->
@@ -317,6 +441,7 @@
 
 
             <!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
+
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/gardeningLayout"
                 android:layout_width="match_parent"
@@ -392,7 +517,7 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/gardeningNewConvoLayout"
+                android:id="@+id/gardeningNewConvoLayout3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
@@ -404,7 +529,7 @@
 
 
                 <TextView
-                    android:id="@+id/gardeningNewConvoText"
+                    android:id="@+id/gardeningNewConvoText3"
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"
                     android:layout_marginStart="24dp"
@@ -415,15 +540,15 @@
                     android:fontFamily="@font/josefinsans_regular"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/gardeningNewConvoHeadline" />
+                    app:layout_constraintTop_toBottomOf="@+id/gardeningNewConvoHeadline3" />
 
                 <TextView
-                    android:id="@+id/gardeningNewConvoHeadline"
+                    android:id="@+id/gardeningNewConvoHeadline3"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="24dp"
                     android:layout_marginEnd="24dp"
-                    android:text="@string/start_conv_gardening"
+                    android:text="@string/start_conv_knitting"
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     android:textStyle="bold"
@@ -437,7 +562,7 @@
                     />
 
                 <Button
-                    android:id="@+id/joinNewConversationBtn"
+                    android:id="@+id/joinNewConversationBtn3"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="24dp"

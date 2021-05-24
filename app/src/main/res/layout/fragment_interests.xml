@@ -9,6 +9,263 @@
     android:background="@drawable/background_gradient">
 
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="30dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/josefinsans_regular"
+                android:text="Choose your interests!"
+                android:textColor="#FFFFFF"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_weight="1"
+                android:background="@drawable/radius"
+                android:elevation="5dp"
+                android:orientation="horizontal"
+                android:padding="20dp">
+
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="244dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/josefinsans_regular"
+                    android:text="@string/interests_knitting"
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
+
+                <RadioButton
+                    android:id="@+id/radioButton1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_weight="1"
+                android:background="@drawable/radius"
+                android:elevation="5dp"
+                android:orientation="horizontal"
+                android:padding="20dp">
+
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="243dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/josefinsans_regular"
+                    android:text="@string/interests_movies"
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
+
+                <RadioButton
+                    android:id="@+id/radioButton2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_weight="1"
+                android:background="@drawable/radius"
+                android:elevation="5dp"
+                android:orientation="horizontal"
+                android:padding="20dp">
+
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="243dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/josefinsans_regular"
+                    android:text="@string/interests_books"
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
+
+                <RadioButton
+                    android:id="@+id/radioButton3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="30dp"
+                android:layout_weight="1"
+                android:background="@drawable/radius"
+                android:elevation="5dp"
+                android:orientation="horizontal"
+                android:padding="20dp">
+
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="243dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/josefinsans_regular"
+                    android:text="@string/interests_gardening"
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
+
+                <RadioButton
+                    android:id="@+id/radioButton4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_weight="1"
+                android:background="@drawable/radius"
+                android:elevation="5dp"
+                android:orientation="horizontal"
+                android:padding="20dp">
+
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="243dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/josefinsans_regular"
+                    android:text="@string/interests_rugby"
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
+
+                <RadioButton
+                    android:id="@+id/radioButton5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_weight="1"
+                android:background="@drawable/radius"
+                android:elevation="5dp"
+                android:orientation="horizontal"
+                android:padding="20dp">
+
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="243dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/josefinsans_regular"
+                    android:text="@string/interests_gaming"
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
+
+                <RadioButton
+                    android:id="@+id/radioButton6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_weight="1"
+                android:background="@drawable/radius"
+                android:elevation="5dp"
+                android:orientation="horizontal"
+                android:padding="20dp">
+
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="243dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/josefinsans_regular"
+                    android:text="@string/interests_gaming"
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
+
+                <RadioButton
+                    android:id="@+id/radioButton7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_weight="1"
+                android:background="@drawable/radius"
+                android:elevation="5dp"
+                android:orientation="horizontal"
+                android:padding="20dp">
+
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="243dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/josefinsans_regular"
+                    android:text="@string/interests_gaming"
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
+
+                <RadioButton
+                    android:id="@+id/radioButton8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
     <Button
         android:id="@+id/confirmButton"
         android:layout_width="0dp"
@@ -17,153 +274,10 @@
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="24dp"
         android:background="@drawable/radius"
-        android:backgroundTint="#FFFFFF"
+        android:backgroundTint="#71B48D"
         android:text="confirm"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.959" />
+        app:layout_constraintStart_toStartOf="parent" />
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        tools:ignore="MissingConstraints"
-        >
-
-        <TextView
-            android:id="@+id/textView1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_margin="30dp"
-            android:text="Choose your interests!"
-            android:textColor="#FFFFFF"
-            android:textSize="26sp"
-            android:textStyle="bold"
-            android:fontFamily="@font/josefinsans_regular"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:layout_weight="1"
-            android:background="@drawable/radius"
-            android:orientation="horizontal"
-            android:padding="20dp"
-            android:elevation="5dp"
-            >
-
-
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="244dp"
-                android:layout_height="wrap_content"
-                android:text="@string/interests_knitting"
-                android:textColor="#000000"
-                android:fontFamily="@font/josefinsans_regular"
-                android:textSize="20sp"/>
-
-            <RadioButton
-                android:id="@+id/radioButton1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="#000000" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginRight="30dp"
-            android:layout_weight="1"
-            android:background="@drawable/radius"
-            android:orientation="horizontal"
-            android:padding="20dp"
-            android:elevation="5dp"
-            >
-
-
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="243dp"
-                android:layout_height="wrap_content"
-                android:text="@string/interests_movies"
-                android:textColor="#000000"
-                android:fontFamily="@font/josefinsans_regular"
-                android:textSize="20sp"/>
-
-            <RadioButton
-                android:id="@+id/radioButton2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="#000000" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginRight="30dp"
-            android:layout_weight="1"
-            android:background="@drawable/radius"
-            android:orientation="horizontal"
-            android:padding="20dp"
-            android:elevation="5dp"
-            >
-
-
-            <TextView
-                android:id="@+id/textView4"
-                android:layout_width="243dp"
-                android:layout_height="wrap_content"
-                android:text="@string/interests_books"
-                android:textColor="#000000"
-                android:fontFamily="@font/josefinsans_regular"
-                android:textSize="20sp"/>
-
-            <RadioButton
-                android:id="@+id/radioButton3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="#000000" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginRight="30dp"
-            android:layout_marginBottom="30dp"
-            android:layout_weight="1"
-            android:background="@drawable/radius"
-            android:orientation="horizontal"
-            android:padding="20dp"
-            android:elevation="5dp"
-            >
-
-
-            <TextView
-                android:id="@+id/textView5"
-                android:layout_width="243dp"
-                android:layout_height="wrap_content"
-                android:text="@string/interests_gardening"
-                android:textColor="#000000"
-                android:fontFamily="@font/josefinsans_regular"
-                android:textSize="20sp"/>
-
-            <RadioButton
-                android:id="@+id/radioButton4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="#000000" />
-        </LinearLayout>
-
-    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

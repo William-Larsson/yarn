@@ -114,7 +114,7 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
      * @param account = the users account details.
      */
     private void updateUI(GoogleSignInAccount account) {
-        Log.d("Alice", "Starta main");
+        Log.d("Alice", "Starta main" + account.getEmail());
         Intent intent = new Intent(this, MainActivity.class);
         intent.putExtra("se.umu.yarn.account", account);
         startActivity(intent);
