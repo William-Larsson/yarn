@@ -6,13 +6,14 @@ import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 import androidx.room.Relation;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity(tableName = "user")
 
 public class UserModel {
 
-    @PrimaryKey(autoGenerate = true)
+    /*@PrimaryKey(autoGenerate = true)
     private int key;
 
     @ColumnInfo(name = "name")
@@ -43,10 +44,31 @@ public class UserModel {
 
     public void setInterests(String interests) {
         this.interests = interests;
+    }*/
+    String name;
+    ArrayList interests;
+
+    public UserModel(){
+
+    }
+    public UserModel(String name, ArrayList interests) {
+        this.name = name;
+        this.interests = interests;
     }
 
-    public UserModel(String name, String interests) {
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
         this.name = name;
+    }
+
+    public ArrayList getInterests() {
+        return interests;
+    }
+
+    public void setInterests(ArrayList interests) {
         this.interests = interests;
     }
 }

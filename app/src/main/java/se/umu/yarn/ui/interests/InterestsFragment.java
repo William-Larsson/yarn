@@ -19,6 +19,8 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.room.Room;
 
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -41,13 +43,20 @@ public class InterestsFragment extends Fragment {
 
     private InterestsViewModel interestsViewModel;
     RadioButton one, two, three, four;
-    List<String> interestList = new ArrayList<>();
+    ArrayList<String> interestList = new ArrayList<>();
+    private GoogleSignInAccount account;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         interestsViewModel =
                 new ViewModelProvider(this).get(InterestsViewModel.class);
         View root = inflater.inflate(R.layout.fragment_interests, container, false);
+        account = requireActivity().getIntent().getParcelableExtra("se.umu.yarn.account");
+
+        UserModel user = new UserModel();
+        d("Alice" , account.getDisplayName());
+
+        user.setName(account.getDisplayName());
 
 
         final Button confirmButton = root.findViewById(R.id.confirmButton);
@@ -68,12 +77,7 @@ public class InterestsFragment extends Fragment {
 
                 InterestListModel interestListModel = new InterestListModel();
                 interestListModel.setInterestList(interestList);
-                UserModel user = new UserModel("Alice", "Trees");
-                user.setName("Alice");
-                d("Alice", "UserKey: " + user.getKey());
-                UserModel user1 = new UserModel("Agnes", "Gardening");
-                user1.setName("Agnes");
-                d("Alice", "UserKey1: " + user.getKey());
+
 
                 List<String> test = interestListModel.getInterestList();
                 for (int i = 0; i < test.size(); i++) {
@@ -84,9 +88,16 @@ public class InterestsFragment extends Fragment {
                     d("Alice", " test Name: " + name);
                 }
 
-                /*Intent intent = new Intent(String.valueOf(InterestsActivity.class));
-                intent.putExtra(EXTRA_MESSAGE, "user");
-                startActivity(intent);*/
+                user.setInterests( interestList);
+
+
+
+
+                /*Intent intent = new Intent(this, MainActivity.class);
+                Bundle bundle = new Bundle();
+                bundle.putParcelableArrayList("mylist", arraylist);
+                intent.putExtras(bundle);
+                this.startActivity(intent);*/
 
                     }
 
