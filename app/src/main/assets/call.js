@@ -30,6 +30,8 @@ function init(userId) {
     })
 
     initCallListener()
+
+    return "true"
 }
 
 // Listen for the call events from remote peer and connect the

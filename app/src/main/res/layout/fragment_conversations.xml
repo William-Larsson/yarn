@@ -1,17 +1,461 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
+    android:background="@drawable/background_gradient"
+    android:paddingBottom="30dp">
 
-    <Button
+    <ScrollView
+        android:id="@+id/scrollView2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/startChatBtn"
-        android:text="Start chat" />
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="30dp"
+                android:text="@string/join_a_conversation"
+                android:textColor="#FFFFFF"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/josefinsans_regular"/>
+
+            <!--            <androidx.constraintlayout.widget.ConstraintLayout-->
+            <!--                android:id="@+id/ConstraintLayoutKnitting"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="175dp"-->
+            <!--                android:layout_marginLeft="30dp"-->
+            <!--                android:layout_marginTop="30dp"-->
+            <!--                android:layout_marginRight="30dp"-->
+            <!--                android:layout_weight="1"-->
+            <!--                android:background="@drawable/radius">-->
 
 
-</LinearLayout>
+            <!--                <TextView-->
+            <!--                    android:id="@+id/Info_text_knitting"-->
+            <!--                    android:layout_width="130dp"-->
+            <!--                    android:layout_height="50dp"-->
+            <!--                    android:layout_marginStart="32dp"-->
+            <!--                    android:text="Darlene and Bob is waiting on you"-->
+            <!--                    android:textColor="@color/black"-->
+            <!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--                    app:layout_constraintStart_toStartOf="parent"-->
+            <!--                    app:layout_constraintTop_toTopOf="parent"-->
+            <!--                    app:layout_constraintVertical_bias="0.84" />-->
+
+            <!--                <TextView-->
+            <!--                    android:id="@+id/Interest_text_knitting"-->
+            <!--                    android:layout_width="0dp"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_marginStart="112dp"-->
+            <!--                    android:text="Knitting"-->
+            <!--                    android:textColor="@color/black"-->
+            <!--                    android:textSize="20sp"-->
+            <!--                    android:textStyle="bold"-->
+            <!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--                    app:layout_constraintStart_toStartOf="parent"-->
+            <!--                    app:layout_constraintTop_toTopOf="parent"-->
+            <!--                    app:layout_constraintVertical_bias="0.277" />-->
+
+            <!--                <Button-->
+            <!--                    android:id="@+id/join_button_knitting"-->
+            <!--                    android:layout_width="0dp"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_marginEnd="36dp"-->
+            <!--                    android:layout_marginBottom="24dp"-->
+            <!--                    android:background="@drawable/join_button"-->
+            <!--                    android:text="Join"-->
+            <!--                    android:textColor="@color/black"-->
+            <!--                    android:textSize="15sp"-->
+            <!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--                    app:layout_constraintEnd_toEndOf="parent"-->
+            <!--                    app:layout_constraintTop_toTopOf="parent"-->
+            <!--                    app:layout_constraintVertical_bias="1.0" />-->
+
+            <!--                <ImageView-->
+            <!--                    android:id="@+id/imageView_knitting"-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_marginStart="24dp"-->
+            <!--                    android:layout_marginTop="24dp"-->
+            <!--                    android:layout_marginEnd="16dp"-->
+            <!--                    app:layout_constraintBottom_toTopOf="@+id/Info_text_knitting"-->
+            <!--                    app:layout_constraintEnd_toStartOf="@+id/Interest_text_knitting"-->
+            <!--                    app:layout_constraintHorizontal_bias="0.692"-->
+            <!--                    app:layout_constraintStart_toStartOf="parent"-->
+            <!--                    app:layout_constraintTop_toTopOf="parent"-->
+            <!--                    app:layout_constraintVertical_bias="0.161"-->
+            <!--                    app:srcCompat="@drawable/knitting" />-->
+
+            <!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+
+
+            <!--            <androidx.constraintlayout.widget.ConstraintLayout-->
+            <!--                android:id="@+id/ConstraintLayoutConvo_Nature"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="175dp"-->
+            <!--                android:layout_marginLeft="30dp"-->
+            <!--                android:layout_marginTop="30dp"-->
+            <!--                android:layout_marginRight="30dp"-->
+            <!--                android:layout_weight="1"-->
+            <!--                android:background="@drawable/radius">-->
+
+
+            <!--                <TextView-->
+            <!--                    android:id="@+id/Info_text_Nature"-->
+            <!--                    android:layout_width="130dp"-->
+            <!--                    android:layout_height="50dp"-->
+            <!--                    android:layout_marginStart="32dp"-->
+            <!--                    android:text="Darlene and Bob is waiting on you"-->
+            <!--                    android:textColor="@color/black"-->
+            <!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--                    app:layout_constraintStart_toStartOf="parent"-->
+            <!--                    app:layout_constraintTop_toTopOf="parent"-->
+            <!--                    app:layout_constraintVertical_bias="0.84" />-->
+
+            <!--                <TextView-->
+            <!--                    android:id="@+id/Interest_text_Nature"-->
+            <!--                    android:layout_width="0dp"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_marginStart="112dp"-->
+            <!--                    android:text="Nature"-->
+            <!--                    android:textColor="@color/black"-->
+            <!--                    android:textSize="20sp"-->
+            <!--                    android:textStyle="bold"-->
+            <!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--                    app:layout_constraintStart_toStartOf="parent"-->
+            <!--                    app:layout_constraintTop_toTopOf="parent"-->
+            <!--                    app:layout_constraintVertical_bias="0.277" />-->
+
+            <!--                <Button-->
+            <!--                    android:id="@+id/join_button_Nature"-->
+            <!--                    android:layout_width="0dp"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_marginEnd="36dp"-->
+            <!--                    android:layout_marginBottom="24dp"-->
+            <!--                    android:background="@drawable/join_button"-->
+            <!--                    android:text="Join"-->
+            <!--                    android:textColor="@color/black"-->
+            <!--                    android:textSize="15sp"-->
+            <!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--                    app:layout_constraintEnd_toEndOf="parent"-->
+            <!--                    app:layout_constraintTop_toTopOf="parent"-->
+            <!--                    app:layout_constraintVertical_bias="1.0" />-->
+
+            <!--                <ImageView-->
+            <!--                    android:id="@+id/imageView_Nature"-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_marginStart="24dp"-->
+            <!--                    android:layout_marginTop="24dp"-->
+            <!--                    android:layout_marginEnd="16dp"-->
+            <!--                    app:layout_constraintBottom_toTopOf="@+id/Info_text_Nature"-->
+            <!--                    app:layout_constraintEnd_toStartOf="@+id/Interest_text_Nature"-->
+            <!--                    app:layout_constraintHorizontal_bias="0.692"-->
+            <!--                    app:layout_constraintStart_toStartOf="parent"-->
+            <!--                    app:layout_constraintTop_toTopOf="parent"-->
+            <!--                    app:layout_constraintVertical_bias="0.161"-->
+            <!--                    app:srcCompat="@drawable/agronomy" />-->
+
+            <!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+            <!--            <androidx.constraintlayout.widget.ConstraintLayout-->
+            <!--                android:id="@+id/ConstraintLayoutConvo_Rugby"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginLeft="30dp"-->
+            <!--                android:layout_marginTop="30dp"-->
+            <!--                android:layout_marginRight="30dp"-->
+            <!--                android:layout_weight="1"-->
+            <!--                android:background="@drawable/radius">-->
+
+
+            <!--                <TextView-->
+            <!--                    android:id="@+id/Info_text_rugby"-->
+            <!--                    android:layout_width="130dp"-->
+            <!--                    android:layout_height="50dp"-->
+            <!--                    android:layout_marginStart="32dp"-->
+            <!--                    android:text="Darlene and Bob is waiting on you"-->
+            <!--                    android:textColor="@color/black"-->
+            <!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--                    app:layout_constraintStart_toStartOf="parent"-->
+            <!--                    app:layout_constraintTop_toTopOf="parent"-->
+            <!--                    app:layout_constraintVertical_bias="0.84" />-->
+
+            <!--                <TextView-->
+            <!--                    android:id="@+id/Interest_text_rugby"-->
+            <!--                    android:layout_width="0dp"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_marginStart="112dp"-->
+            <!--                    android:text="Rugby"-->
+            <!--                    android:textColor="@color/black"-->
+            <!--                    android:textSize="20sp"-->
+            <!--                    android:textStyle="bold"-->
+            <!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--                    app:layout_constraintStart_toStartOf="parent"-->
+            <!--                    app:layout_constraintTop_toTopOf="parent"-->
+            <!--                    app:layout_constraintVertical_bias="0.277" />-->
+
+            <!--                <Button-->
+            <!--                    android:id="@+id/join_button_rugby"-->
+            <!--                    android:layout_width="0dp"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_marginEnd="36dp"-->
+            <!--                    android:layout_marginBottom="24dp"-->
+            <!--                    android:background="@drawable/join_button"-->
+            <!--                    android:text="Join"-->
+            <!--                    android:textColor="@color/black"-->
+            <!--                    android:textSize="15sp"-->
+            <!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--                    app:layout_constraintEnd_toEndOf="parent"-->
+            <!--                    app:layout_constraintTop_toTopOf="parent"-->
+            <!--                    app:layout_constraintVertical_bias="1.0" />-->
+
+            <!--                <ImageView-->
+            <!--                    android:id="@+id/imageView_rugby"-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_marginStart="24dp"-->
+            <!--                    android:layout_marginTop="24dp"-->
+            <!--                    android:layout_marginEnd="16dp"-->
+            <!--                    app:layout_constraintBottom_toTopOf="@+id/Info_text_rugby"-->
+            <!--                    app:layout_constraintEnd_toStartOf="@+id/Interest_text_rugby"-->
+            <!--                    app:layout_constraintHorizontal_bias="0.692"-->
+            <!--                    app:layout_constraintStart_toStartOf="parent"-->
+            <!--                    app:layout_constraintTop_toTopOf="parent"-->
+            <!--                    app:layout_constraintVertical_bias="0.161"-->
+            <!--                    app:srcCompat="@drawable/rugby" />-->
+
+            <!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+            <!--            <androidx.constraintlayout.widget.ConstraintLayout-->
+            <!--                android:id="@+id/ConstraintLayoutConvo_music"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="175dp"-->
+            <!--                android:layout_marginLeft="30dp"-->
+            <!--                android:layout_marginTop="30dp"-->
+            <!--                android:layout_marginRight="30dp"-->
+            <!--                android:layout_weight="1"-->
+            <!--                android:background="@drawable/radius">-->
+
+
+            <!--                <TextView-->
+            <!--                    android:id="@+id/Info_text_music"-->
+            <!--                    android:layout_width="130dp"-->
+            <!--                    android:layout_height="50dp"-->
+            <!--                    android:layout_marginStart="32dp"-->
+            <!--                    android:text="Darlene and Bob is waiting on you"-->
+            <!--                    android:textColor="@color/black"-->
+            <!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--                    app:layout_constraintStart_toStartOf="parent"-->
+            <!--                    app:layout_constraintTop_toTopOf="parent"-->
+            <!--                    app:layout_constraintVertical_bias="0.84" />-->
+
+            <!--                <TextView-->
+            <!--                    android:id="@+id/Interest_text_music"-->
+            <!--                    android:layout_width="0dp"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_marginStart="112dp"-->
+            <!--                    android:text="Music"-->
+            <!--                    android:textColor="@color/black"-->
+            <!--                    android:textSize="20sp"-->
+            <!--                    android:textStyle="bold"-->
+            <!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--                    app:layout_constraintStart_toStartOf="parent"-->
+            <!--                    app:layout_constraintTop_toTopOf="parent"-->
+            <!--                    app:layout_constraintVertical_bias="0.277" />-->
+
+            <!--                <Button-->
+            <!--                    android:id="@+id/join_button_music"-->
+            <!--                    android:layout_width="0dp"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_marginEnd="36dp"-->
+            <!--                    android:layout_marginBottom="24dp"-->
+            <!--                    android:background="@drawable/join_button"-->
+            <!--                    android:text="Join"-->
+            <!--                    android:textColor="@color/black"-->
+            <!--                    android:textSize="15sp"-->
+            <!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--                    app:layout_constraintEnd_toEndOf="parent"-->
+            <!--                    app:layout_constraintTop_toTopOf="parent"-->
+            <!--                    app:layout_constraintVertical_bias="1.0" />-->
+
+            <!--                <ImageView-->
+            <!--                    android:id="@+id/imageView_music"-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_marginStart="24dp"-->
+            <!--                    android:layout_marginTop="24dp"-->
+            <!--                    android:layout_marginEnd="16dp"-->
+            <!--                    app:layout_constraintBottom_toTopOf="@+id/Info_text_music"-->
+            <!--                    app:layout_constraintEnd_toStartOf="@+id/Interest_text_music"-->
+            <!--                    app:layout_constraintHorizontal_bias="1.0"-->
+            <!--                    app:layout_constraintStart_toStartOf="parent"-->
+            <!--                    app:layout_constraintTop_toTopOf="parent"-->
+
+            <!--                    app:layout_constraintVertical_bias="0.0"-->
+            <!--                    app:srcCompat="@drawable/guitar"-->
+
+            <!--                    />-->
+
+
+            <!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/gardeningLayout"
+                android:layout_width="match_parent"
+                android:layout_height="175dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="30dp"
+                android:layout_weight="1"
+                android:background="@drawable/radius"
+                android:elevation="5dp"
+                android:visibility="gone">
+
+
+                <TextView
+                    android:id="@+id/gardeningUsersText"
+                    android:layout_width="130dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="24dp"
+                    android:text="Darlene and Bob is waiting on you."
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/josefinsans_regular"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.84" />
+
+                <TextView
+                    android:id="@+id/gardeningHeadline"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:fontFamily="@font/josefinsans_bold"
+                    android:text="Gardening"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/imageView_garden"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.31" />
+
+                <Button
+                    android:id="@+id/gardeningJoinBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginBottom="24dp"
+                    android:background="@drawable/join_button"
+                    android:text="@string/join"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/josefinsans_bold"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <ImageView
+                    android:id="@+id/imageView_garden"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintBottom_toTopOf="@+id/gardeningUsersText"
+                    app:layout_constraintEnd_toStartOf="@+id/gardeningHeadline"
+                    app:layout_constraintHorizontal_bias="0.692"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.161"
+                    app:srcCompat="@drawable/gardening" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/gardeningNewConvoLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_weight="1"
+                android:background="@drawable/radius"
+                android:elevation="5dp"
+                android:layout_marginBottom="16dp">
+
+
+                <TextView
+                    android:id="@+id/gardeningNewConvoText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="@string/no_one_talking"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/josefinsans_regular"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/gardeningNewConvoHeadline" />
+
+                <TextView
+                    android:id="@+id/gardeningNewConvoHeadline"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:text="@string/start_conv_gardening"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.237"
+                    android:fontFamily="@font/josefinsans_bold"
+                    />
+
+                <Button
+                    android:id="@+id/joinNewConversationBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginBottom="24dp"
+                    android:background="@drawable/join_button"
+                    android:text="@string/start"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/josefinsans_bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

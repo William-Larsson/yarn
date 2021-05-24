@@ -17,4 +17,9 @@
     <string name="end_call">End call</string>
     <string name="mic_on">Mic on</string>
     <string name="mic_off">Mic off</string>
+    <string name="no_one_talking">No one is talking about it.</string>
+    <string name="start">Start</string>
+    <string name="join_a_conversation">Join a conversation!</string>
+    <string name="start_conv_gardening">Start a new conversation about gardening?</string>
+    <string name="join">Join</string>
 </resources>

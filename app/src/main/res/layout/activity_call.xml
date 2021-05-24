@@ -8,9 +8,9 @@
 
 
     <WebView
+        android:id="@+id/webView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/webView" />
+        android:layout_height="match_parent" />
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -44,29 +44,9 @@
             android:layout_alignParentEnd="true" />
 
     </RelativeLayout>
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:layout_alignParentBottom="true"
-        android:id="@+id/callInputLayout">
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/remoteUsernameEdit"
-            android:layout_toStartOf="@id/callBtn"
-            android:hint="Who do you want to call?" />
+    <!-- TODO: Add some info for someone who is waiting -->
 
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="call"
-            android:id="@+id/callBtn"
-            android:layout_alignParentEnd="true" />
-
-    </RelativeLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

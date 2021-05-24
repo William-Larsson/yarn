@@ -43,6 +43,4 @@ public class InterestsActivity extends AppCompatActivity {
         intent.putExtra("se.umu.yarn.account", "account");
         startActivity(intent);
     }
-
-
 }
