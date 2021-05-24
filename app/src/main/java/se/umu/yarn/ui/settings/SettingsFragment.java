@@ -12,7 +12,11 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
+import java.util.ArrayList;
+
 import se.umu.yarn.R;
+
+import static android.util.Log.d;
 
 public class SettingsFragment extends Fragment {
 
@@ -30,6 +34,20 @@ public class SettingsFragment extends Fragment {
                 textView.setText(s);
             }
         });
+
+        d("Alice", "SEtting");
+
+        Bundle bundle = getArguments();
+        if (bundle != null) {
+            ArrayList myInt = bundle.getStringArrayList("listan");
+            d("Alice", "Funk");
+        }
+        else{
+            d("Alice", "funk int");
+        }
+
+
+
         return root;
     }
 }

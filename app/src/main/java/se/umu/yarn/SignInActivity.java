@@ -92,11 +92,11 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
 
     private void handleSignInResult(Task<GoogleSignInAccount> completedTask) {
 
-        Log.d("handle", "Inne i handle: " );
+        Log.d("Robin", "Inne i handle: " );
         try {
             GoogleSignInAccount account = completedTask.getResult(ApiException.class);
 
-            Log.d("myTag",account.getEmail() );
+            Log.d("Robin",account.getEmail() );
 
             // Signed in successfully, show authenticated UI.
             updateUI(account);
@@ -104,7 +104,7 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
         } catch (ApiException e) {
             // The ApiException status code indicates the detailed failure reason.
             // Please refer to the GoogleSignInStatusCodes class reference for more information.
-            Log.w( "fail", "nånting gick fel ");
+            Log.w( "Robin", "nånting gick fel " + e.getMessage() + e.getCause());
             //updateUI(null);
         }
     }
@@ -114,6 +114,7 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
      * @param account = the users account details.
      */
     private void updateUI(GoogleSignInAccount account) {
+        Log.d("Alice", "Starta main" + account.getEmail());
         Intent intent = new Intent(this, MainActivity.class);
         intent.putExtra("se.umu.yarn.account", account);
         startActivity(intent);
