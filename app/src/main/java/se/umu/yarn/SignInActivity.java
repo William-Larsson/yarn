@@ -19,7 +19,6 @@ import com.google.android.gms.tasks.Task;
 public class SignInActivity extends AppCompatActivity implements View.OnClickListener{
 
     GoogleSignInClient mGoogleSignInClient;
-    //RC_SIGN_IN
     SignInButton signInButton;
 
     @Override
@@ -31,6 +30,7 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
         // Configure sign-in to request the user's ID, email address, and basic
         // profile. ID and basic profile are included in DEFAULT_SIGN_IN.
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                //.requestIdToken("789873226633-e1pn6ur3fr23ll15kuhmpfs0vtcu48ak.apps.googleusercontent.com")
                 .requestEmail()
                 .build();
 
@@ -50,12 +50,11 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
         // Check for existing Google Sign In account, if the user is already signed in
         // the GoogleSignInAccount will be non-null.
         GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
+        //Log.d("robin", account.getEmail());
         //updateUI(account);
 
         // Update your UI accordingly—that is, hide the sign-in button,
         // launch your main activity, or whatever is appropriate for your app.
-
-
     }
 
     @Override
@@ -71,7 +70,7 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
     private void signIn() {
         Intent signInIntent = mGoogleSignInClient.getSignInIntent();
         //RC_SIGN_IN
-        Log.d("SignIn", "Inne i sign in ");
+        Log.d("robin", mGoogleSignInClient.getApiKey().toString());
 
         startActivityForResult(signInIntent, 15);
     }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -12,40 +12,19 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
-    <RelativeLayout
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/waitingToJoinText"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#ccc"
-        android:visibility="gone"
-        android:id="@+id/callLayout">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            tools:text="Someone is calling..."
-            android:padding="20dp"
-            android:textStyle="bold"
-            android:id="@+id/incomingCallTxt" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_call"
-            android:id="@+id/acceptBtn"
-            android:layout_toStartOf="@id/rejectBtn"
-            android:padding="20dp" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_call_end"
-            android:id="@+id/rejectBtn"
-            android:padding="20dp"
-            android:layout_alignParentEnd="true" />
-
-    </RelativeLayout>
-
-    <!-- TODO: Add some info for someone who is waiting -->
+        android:text="Waiting for someone to join you..."
+        android:textColor="@color/black"
+        android:fontFamily="@font/josefinsans_bold"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -56,7 +35,10 @@
         android:id="@+id/chatControlLayout"
         android:background="@color/white"
         android:padding="16dp"
-        android:elevation="5dp">
+        android:elevation="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -71,8 +53,8 @@
                 android:padding="4dp"
                 android:src="@drawable/ic_videocam"
                 android:id="@+id/toggleVideoBtn"
-                android:tint="@color/yarn_orange"
-                android:contentDescription="@string/toggle_video_camera" />
+                android:contentDescription="@string/toggle_video_camera"
+                app:tint="@color/yarn_orange" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -96,8 +78,8 @@
                 android:background="@drawable/chat_control_button"
                 android:id="@+id/toggleMicBtn"
                 android:src="@drawable/ic_mic"
-                android:tint="@color/yarn_orange"
-                android:contentDescription="@string/toggle_microphone" />
+                android:contentDescription="@string/toggle_microphone"
+                app:tint="@color/yarn_orange" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -121,8 +103,8 @@
                 android:background="@drawable/chat_control_button"
                 android:id="@+id/sendPhotoBtn"
                 android:src="@drawable/ic_photo"
-                android:tint="@color/yarn_orange"
-                android:contentDescription="@string/send_a_photograph" />
+                android:contentDescription="@string/send_a_photograph"
+                app:tint="@color/yarn_orange" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -151,8 +133,8 @@
                 android:background="@drawable/chat_control_button"
                 android:id="@+id/endCallBtn"
                 android:src="@drawable/ic_call_end"
-                android:tint="@color/yarn_orange"
-                android:contentDescription="@string/end_the_call" />
+                android:contentDescription="@string/end_the_call"
+                app:tint="@color/yarn_orange" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -164,4 +146,4 @@
     </LinearLayout>
 
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

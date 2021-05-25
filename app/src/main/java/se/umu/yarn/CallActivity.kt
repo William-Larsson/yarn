@@ -189,9 +189,6 @@ class CallActivity : AppCompatActivity() {
     private fun onCallRequest(caller: String?) {
         if (caller == null) return
 
-        callLayout.visibility = View.VISIBLE
-        incomingCallTxt.text = String.format("%s is calling...", caller)
-
         // Accept the call.
         firebaseRef.child(conversationTopic).child(conversationRoomID)
             .child(CALL_ACCEPTED).setValue(true)
@@ -204,7 +201,6 @@ class CallActivity : AppCompatActivity() {
         firebaseRef.child(conversationTopic).child(conversationRoomID)
             .child(CONVERSATION_OWNER).setValue(localUserAccountID)
 
-        callLayout.visibility = View.GONE
         showChatControls() // change to appropriate UI elements
     }
 
@@ -213,6 +209,7 @@ class CallActivity : AppCompatActivity() {
      * and hide call control that are in the way.
      */
     private fun showChatControls() {
+        waitingToJoinText.visibility = View.GONE
         chatControlLayout.visibility = View.VISIBLE
     }
 

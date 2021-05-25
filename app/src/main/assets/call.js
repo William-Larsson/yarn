@@ -19,7 +19,7 @@ remoteVideo.onplaying = () => { remoteVideo.style.opacity = 1 }
 let peer
 function init(userId) {
     peer = new Peer(userId, {
-        host: '192.168.1.203', // NOTE: change to IP of the current machine. Get with ifconfig | grep inet
+        host: '192.168.10.179', // NOTE: change to IP of the current machine. Get with ifconfig | grep inet
         port: 9000,
         path: '/yarn' // Needs to be the same path as the PeerJS run command, see above.
     })
