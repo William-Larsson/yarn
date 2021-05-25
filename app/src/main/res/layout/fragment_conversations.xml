@@ -34,12 +34,86 @@
                 android:textStyle="bold" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/gardeningLayout"
+                android:layout_width="match_parent"
+                android:layout_height="175dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="30dp"
+                android:layout_weight="1"
+                android:background="@drawable/radius"
+                android:elevation="5dp"
+                android:visibility="gone">
+
+
+                <TextView
+                    android:id="@+id/gardeningUsersText"
+                    android:layout_width="130dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="24dp"
+                    android:text="Robin is waiting on you."
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/josefinsans_regular"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.84" />
+
+                <TextView
+                    android:id="@+id/gardeningHeadline"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:fontFamily="@font/josefinsans_bold"
+                    android:text="Gardening"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/imageView_garden"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.31" />
+
+                <Button
+                    android:id="@+id/gardeningJoinBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginBottom="24dp"
+                    android:background="@drawable/join_button"
+                    android:text="@string/join"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/josefinsans_bold"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <ImageView
+                    android:id="@+id/imageView_garden"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintBottom_toTopOf="@+id/gardeningUsersText"
+                    app:layout_constraintEnd_toStartOf="@+id/gardeningHeadline"
+                    app:layout_constraintHorizontal_bias="0.692"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.161"
+                    app:srcCompat="@drawable/gardening" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/gardeningNewConvoLayout5"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp"
-                android:layout_marginBottom="16dp"
+                android:layout_marginBottom="30dp"
                 android:layout_weight="1"
                 android:background="@drawable/radius"
                 android:elevation="5dp">
@@ -101,7 +175,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp"
-                android:layout_marginBottom="16dp"
+                android:layout_marginBottom="30dp"
                 android:layout_weight="1"
                 android:background="@drawable/radius"
                 android:elevation="5dp">
@@ -154,80 +228,6 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="1.0" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/gardeningLayout"
-                android:layout_width="match_parent"
-                android:layout_height="175dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
-                android:layout_marginBottom="30dp"
-                android:layout_weight="1"
-                android:background="@drawable/radius"
-                android:elevation="5dp"
-                android:visibility="gone">
-
-
-                <TextView
-                    android:id="@+id/gardeningUsersText"
-                    android:layout_width="130dp"
-                    android:layout_height="50dp"
-                    android:layout_marginStart="24dp"
-                    android:text="Darlene and Bob is waiting on you."
-                    android:textColor="@color/black"
-                    android:fontFamily="@font/josefinsans_regular"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.84" />
-
-                <TextView
-                    android:id="@+id/gardeningHeadline"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
-                    android:fontFamily="@font/josefinsans_bold"
-                    android:text="Gardening"
-                    android:textColor="@color/black"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/imageView_garden"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.31" />
-
-                <Button
-                    android:id="@+id/gardeningJoinBtn"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="24dp"
-                    android:layout_marginBottom="24dp"
-                    android:background="@drawable/join_button"
-                    android:text="@string/join"
-                    android:textColor="@color/black"
-                    android:fontFamily="@font/josefinsans_bold"
-                    android:textSize="15sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="1.0" />
-
-                <ImageView
-                    android:id="@+id/imageView_garden"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginTop="24dp"
-                    android:layout_marginEnd="16dp"
-                    app:layout_constraintBottom_toTopOf="@+id/gardeningUsersText"
-                    app:layout_constraintEnd_toStartOf="@+id/gardeningHeadline"
-                    app:layout_constraintHorizontal_bias="0.692"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.161"
-                    app:srcCompat="@drawable/gardening" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

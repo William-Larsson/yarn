@@ -1,40 +1,28 @@
 package se.umu.yarn.ui.interests;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.provider.ContactsContract;
-import android.telecom.Call;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.CompoundButton;
 import android.widget.RadioButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.room.Room;
 
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import se.umu.yarn.CallActivity;
-import se.umu.yarn.DatabaseClass;
 import se.umu.yarn.EntityClass.InterestListModel;
 import se.umu.yarn.EntityClass.UserModel;
-import se.umu.yarn.InterestsActivity;
-import se.umu.yarn.MainActivity;
 import se.umu.yarn.R;
-import se.umu.yarn.ui.conversations.ConversationsFragment;
 import se.umu.yarn.ui.settings.SettingsFragment;
 
-import static android.provider.AlarmClock.EXTRA_MESSAGE;
 import static android.util.Log.d;
 
 public class InterestsFragment extends Fragment {
@@ -58,54 +46,52 @@ public class InterestsFragment extends Fragment {
         UserModel user = new UserModel();
 
         TextView textView = root.findViewById(R.id.textView1);
-        textView.setText("Hello " + account.getDisplayName() + " choose your interests!");
+        textView.setText("Hello " + account.getGivenName() + ", choose your interests!");
         //d("Alice" , account.getDisplayName());
 
         //user.setName(account.getDisplayName());
 
-
-        final Button confirmButton = root.findViewById(R.id.confirmButton);
+        final Button confirmButton = root.findViewById(R.id.saveInterestBtn);
         d("Alice", "Start fragment");
-        confirmButton.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                d("Alice", "Clicked");
+        confirmButton.setOnClickListener(view -> {
+            Toast.makeText(requireContext(), "Interests has been saved!", Toast.LENGTH_LONG).show();
 
-                //Get all the checked boxes and insert into database
+            d("Alice", "Clicked");
 
-                for (int i = 0; i < interestList.size(); i++) {
-                    //INSERT INTO table (interests)
-                    //VALUES ($name);
+            //Get all the checked boxes and insert into database
 
-                    String name = interestList.get(i);
-                    d("Alice", "NAme: " + name);
-                }
+            for (int i = 0; i < interestList.size(); i++) {
+                //INSERT INTO table (interests)
+                //VALUES ($name);
 
-                InterestListModel interestListModel = new InterestListModel();
-                interestListModel.setInterestList(interestList);
+                String name = interestList.get(i);
+                d("Alice", "NAme: " + name);
+            }
 
-
-                List<String> test = interestListModel.getInterestList();
-                for (int i = 0; i < test.size(); i++) {
-                    //INSERT INTO table (interests)
-                    //VALUES ($name);
-
-                    String name = test.get(i);
-                    d("Alice", " test Name: " + name);
-                }
-
-                //user.setInterests( interestList);
-
-                SettingsFragment fragment = new SettingsFragment();
-                Bundle bundle = new Bundle();
-                bundle.putStringArrayList("listan", interestList);
-                fragment.setArguments(bundle);
-
-                d("Alice", bundle.toString());
-
-                d("Alice" , "test");
+            InterestListModel interestListModel = new InterestListModel();
+            interestListModel.setInterestList(interestList);
 
 
-                    }
+            List<String> test = interestListModel.getInterestList();
+            for (int i = 0; i < test.size(); i++) {
+                //INSERT INTO table (interests)
+                //VALUES ($name);
+
+                String name = test.get(i);
+                d("Alice", " test Name: " + name);
+            }
+
+            //user.setInterests( interestList);
+
+            SettingsFragment fragment = new SettingsFragment();
+            Bundle bundle = new Bundle();
+            bundle.putStringArrayList("listan", interestList);
+            fragment.setArguments(bundle);
+
+            d("Alice", bundle.toString());
+
+            d("Alice" , "test");
+
 
                 });
 
