@@ -17,6 +17,7 @@ import androidx.navigation.fragment.NavHostFragment;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
+import java.util.ArrayList;
 import java.util.Objects;
 
 /**
@@ -40,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Log.d("Alice", "Nu kör vi");
 
         //Intent intent = getIntent();
         //account = intent.getParcelableExtra("se.umu.yarn.account");
@@ -98,5 +100,14 @@ public class MainActivity extends AppCompatActivity {
     private void askForPermissions() {
         int requestCode = 1;
         ActivityCompat.requestPermissions(this, permissions, requestCode);
+    }
+
+    /**
+     * Set the interestList for the convos
+     * */
+    public void setInterestList(ArrayList list){
+        Log.d("Alice", (String) list.get(0));
+
+
     }
 }

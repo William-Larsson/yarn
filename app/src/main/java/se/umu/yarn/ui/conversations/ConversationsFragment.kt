@@ -1,14 +1,13 @@
 package se.umu.yarn.ui.conversations
 
+import android.R.attr.key
 import android.content.Intent
 import android.os.Bundle
-import android.renderscript.Sampler
 import android.util.Log
+import android.util.Log.d
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
-import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
@@ -21,6 +20,8 @@ import kotlinx.android.synthetic.main.fragment_conversations.*
 import kotlinx.android.synthetic.main.fragment_convo.joinNewConversationBtn
 import se.umu.yarn.CallActivity
 import se.umu.yarn.R
+import java.util.*
+
 
 /**
  * Fragment for showing ongoing conversations as well as starting new ones
@@ -40,6 +41,7 @@ class ConversationsFragment : Fragment() {
         )
         val root = inflater.inflate(R.layout.fragment_conversations, container, false)
 
+        //user.setInterests( interestList);
         setupFirebaseListeners()
 
         return root
@@ -59,6 +61,32 @@ class ConversationsFragment : Fragment() {
             startActivity(intent)
         }
     }
+
+//    override fun onCreate(savedInstanceState: Bundle?) {
+//        super.onCreate(savedInstanceState)
+//
+//        var myInt: ArrayList<String?>? = null
+//
+//        var mBundle: Bundle? = Bundle()
+//        myInt = this.arguments?.getStringArrayList("listan")
+//        //myInt = mBundle?.getStringArrayList("23134")
+//
+//
+//        if (myInt != null) {
+//            d("Alice", "oh shiet" + myInt.get(0))
+//        }
+//        else{
+//            d("Alice", "myInt is null")
+//        }
+//
+//
+//
+//        if (myInt != null) {
+//            Log.d("Alice", "Get intent i conversation: " + myInt.get(1))
+//        }
+//
+//
+//    }
 
     /**
      * Listen for changes in the Firebase database.
