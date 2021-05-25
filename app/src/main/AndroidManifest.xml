@@ -15,9 +15,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar"
         android:usesCleartextTraffic="true">
-        <activity android:name=".CallActivity"></activity>
-        <activity android:name=".MainActivity"></activity>
-        <activity android:name=".SignInActivity">
+        <activity android:name=".CallActivity" />
+        <activity android:name=".MainActivity">
+        </activity>
+        <activity android:name=".SignInActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

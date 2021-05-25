@@ -35,17 +35,14 @@ class ConversationsFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View?
     {
-        //account = requireActivity().intent.getParcelableExtra("se.umu.yarn.account")!!
+        account = requireActivity().intent.getParcelableExtra("se.umu.yarn.account")!!
         conversationsViewModel = ViewModelProvider(this).get(
             ConversationsViewModel::class.java
         )
         val root = inflater.inflate(R.layout.fragment_conversations, container, false)
 
-
         //user.setInterests( interestList);
         setupFirebaseListeners()
-
-
 
         return root
     }
@@ -65,31 +62,31 @@ class ConversationsFragment : Fragment() {
         }
     }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-        var myInt: ArrayList<String?>? = null
-
-        var mBundle: Bundle? = Bundle()
-        myInt = this.arguments?.getStringArrayList("listan")
-        //myInt = mBundle?.getStringArrayList("23134")
-
-
-        if (myInt != null) {
-            d("Alice", "oh shiet" + myInt.get(0))
-        }
-        else{
-            d("Alice", "myInt is null")
-        }
-
-
-
-        if (myInt != null) {
-            Log.d("Alice", "Get intent i conversation: " + myInt.get(1))
-        }
-
-
-    }
+//    override fun onCreate(savedInstanceState: Bundle?) {
+//        super.onCreate(savedInstanceState)
+//
+//        var myInt: ArrayList<String?>? = null
+//
+//        var mBundle: Bundle? = Bundle()
+//        myInt = this.arguments?.getStringArrayList("listan")
+//        //myInt = mBundle?.getStringArrayList("23134")
+//
+//
+//        if (myInt != null) {
+//            d("Alice", "oh shiet" + myInt.get(0))
+//        }
+//        else{
+//            d("Alice", "myInt is null")
+//        }
+//
+//
+//
+//        if (myInt != null) {
+//            Log.d("Alice", "Get intent i conversation: " + myInt.get(1))
+//        }
+//
+//
+//    }
 
     /**
      * Listen for changes in the Firebase database.
