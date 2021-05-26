@@ -1,20 +1,14 @@
 package se.umu.yarn.model.user;
 
-import androidx.room.ColumnInfo;
-import androidx.room.Embedded;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
-import androidx.room.Relation;
-
-import java.util.ArrayList;
-import java.util.List;
 
 @Entity(tableName = "Tbl_User")
 
 public class UserEntity {
 
     @PrimaryKey(autoGenerate = true)
-    private int key;
+    private long userId;
     String name;
     String interests;
 
@@ -25,12 +19,12 @@ public class UserEntity {
         this.interests = interests;
     }
 
-    public int getKey() {
-        return key;
+    public long getUserId() {
+        return userId;
     }
 
-    public void setKey(int key) {
-        this.key = key;
+    public void setUserId(long userId) {
+        this.userId = userId;
     }
 
     public String getName() {

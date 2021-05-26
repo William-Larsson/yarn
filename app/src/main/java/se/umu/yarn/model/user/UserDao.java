@@ -6,6 +6,7 @@ import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
+import androidx.room.Transaction;
 import androidx.room.Update;
 
 import java.util.List;
@@ -30,6 +31,12 @@ public interface UserDao {
 
     @Query("SELECT * FROM Tbl_User ORDER BY name ASC")
     LiveData<List<UserEntity>> getAlphabetUsers();
+
+    // For one to many relation.
+    // TODO: Not tested yet!
+    @Transaction
+    @Query("SELECT * FROM Tbl_User")
+    public LiveData<List<UserInterestEntity>> getAllUsersWithInterests();
 
 }
 

@@ -1,7 +1,6 @@
 package se.umu.yarn.model.interests;
 
 
-import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
@@ -13,27 +12,24 @@ import androidx.room.PrimaryKey;
 public class InterestEntity {
 
     @PrimaryKey(autoGenerate = true)
-    private int id;
-
-    @ColumnInfo(name = "name")
+    private long interestId;
+    private long foreignUserId; // Foreign key used in UserInterestEntity
     private String name;
-
-    // The id of the image used in the listview.
-    @ColumnInfo(name = "image_resource")
-    private String drawableResourceName;
+    private String drawableResourceName; // The id of the image used in the listview.
     // Get the drawable resource ID by: application.getResources().getIdentifier("<name>", "drawable", "se.umu.yarn")
+
 
     public InterestEntity(String name, String drawableResourceName){
         this.name = name;
         this.drawableResourceName = drawableResourceName;
     }
 
-    public int getId() {
-        return id;
+    public long getInterestId() {
+        return interestId;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setInterestId(long interestId) {
+        this.interestId = interestId;
     }
 
     public String getName() {
@@ -50,6 +46,14 @@ public class InterestEntity {
 
     public void setDrawableResourceName(String drawableResourceName) {
         this.drawableResourceName = drawableResourceName;
+    }
+
+    public long getForeignUserId() {
+        return foreignUserId;
+    }
+
+    public void setForeignUserId(long foreignUserId) {
+        this.foreignUserId = foreignUserId;
     }
 }
 
