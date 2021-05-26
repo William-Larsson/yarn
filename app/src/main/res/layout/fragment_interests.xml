@@ -9,235 +9,35 @@
     android:background="@drawable/background_gradient">
 
 
-    <ScrollView
+    <TextView
+        android:id="@+id/interests_headline"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <LinearLayout
-            android:id="@+id/linearLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            tools:ignore="MissingConstraints">
-
-            <TextView
-                android:id="@+id/textView1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="30dp"
-                android:layout_weight="1"
-                android:fontFamily="@font/josefinsans_regular"
-                android:text="Choose your interests!"
-                android:textColor="#FFFFFF"
-                android:textSize="26sp"
-                android:textStyle="bold" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
-                android:layout_weight="1"
-                android:background="@drawable/radius"
-                android:elevation="5dp"
-                android:orientation="horizontal"
-                android:padding="20dp">
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:fontFamily="@font/josefinsans_regular"
+        android:text="Choose your interests!"
+        android:textColor="#FFFFFF"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
 
 
-                <TextView
-                    android:id="@+id/textView2"
-                    android:layout_width="244dp"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/josefinsans_regular"
-                    android:text="@string/interests_knitting"
-                    android:textColor="#000000"
-                    android:textSize="20sp" />
-
-                <View
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"/>
-
-                <RadioButton
-                    android:id="@+id/radioButton1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="#000000" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="30dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginRight="30dp"
-                android:layout_weight="1"
-                android:background="@drawable/radius"
-                android:elevation="5dp"
-                android:orientation="horizontal"
-                android:padding="20dp">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/interests_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/interest_item"
+        android:clipToPadding="false"
+        android:paddingBottom="196dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/interests_headline"
+        >
 
 
-                <TextView
-                    android:id="@+id/textView3"
-                    android:layout_width="243dp"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/josefinsans_regular"
-                    android:text="@string/interests_movies"
-                    android:textColor="#000000"
-                    android:textSize="20sp" />
 
-                <View
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"/>
-
-                <RadioButton
-                    android:id="@+id/radioButton2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="#000000" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="30dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginRight="30dp"
-                android:layout_weight="1"
-                android:background="@drawable/radius"
-                android:elevation="5dp"
-                android:orientation="horizontal"
-                android:padding="20dp">
-
-
-                <TextView
-                    android:id="@+id/textView4"
-                    android:layout_width="243dp"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/josefinsans_regular"
-                    android:text="@string/interests_books"
-                    android:textColor="#000000"
-                    android:textSize="20sp" />
-
-                <View
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"/>
-
-                <RadioButton
-                    android:id="@+id/radioButton3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="#000000" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="30dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginRight="30dp"
-                android:layout_marginBottom="30dp"
-                android:layout_weight="1"
-                android:background="@drawable/radius"
-                android:elevation="5dp"
-                android:orientation="horizontal"
-                android:padding="20dp">
-
-
-                <TextView
-                    android:id="@+id/textView5"
-                    android:layout_width="243dp"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/josefinsans_regular"
-                    android:text="@string/interests_gardening"
-                    android:textColor="#000000"
-                    android:textSize="20sp" />
-
-                <View
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"/>
-
-                <RadioButton
-                    android:id="@+id/radioButton4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="#000000" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
-                android:layout_weight="1"
-                android:background="@drawable/radius"
-                android:elevation="5dp"
-                android:orientation="horizontal"
-                android:padding="20dp">
-
-
-                <TextView
-                    android:id="@+id/textView6"
-                    android:layout_width="243dp"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/josefinsans_regular"
-                    android:text="@string/interests_rugby"
-                    android:textColor="#000000"
-                    android:textSize="20sp" />
-
-                <View
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"/>
-
-                <RadioButton
-                    android:id="@+id/radioButton5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="#000000" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="30dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginRight="30dp"
-                android:layout_marginBottom="96dp"
-                android:layout_weight="1"
-                android:background="@drawable/radius"
-                android:elevation="5dp"
-                android:orientation="horizontal"
-                android:padding="20dp">
-
-
-                <TextView
-                    android:id="@+id/textView7"
-                    android:layout_width="243dp"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/josefinsans_regular"
-                    android:text="@string/interests_gaming"
-                    android:textColor="#000000"
-                    android:textSize="20sp" />
-
-                <View
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"/>
-
-                <RadioButton
-                    android:id="@+id/radioButton6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="#000000" />
-            </LinearLayout>
-
-        </LinearLayout>
-    </ScrollView>
+    </androidx.recyclerview.widget.RecyclerView>
 
     <Button
         android:id="@+id/saveInterestBtn"
@@ -248,7 +48,7 @@
         android:layout_marginBottom="24dp"
         android:background="@drawable/radius"
         android:backgroundTint="#71B48D"
-        android:text="Save"
+        android:text="@string/save"
         android:textSize="20sp"
         android:fontFamily="@font/josefinsans_bold"
         app:layout_constraintBottom_toBottomOf="parent"

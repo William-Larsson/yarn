@@ -1,4 +1,4 @@
-package se.umu.yarn.EntityClass;
+package se.umu.yarn.model.user;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Embedded;
@@ -9,38 +9,21 @@ import androidx.room.Relation;
 import java.util.ArrayList;
 import java.util.List;
 
-@Entity(tableName = "user")
+@Entity(tableName = "Tbl_User")
 
-public class UserModel {
+public class UserEntity {
 
     @PrimaryKey(autoGenerate = true)
     private int key;
-/*
-    @ColumnInfo(name = "name")
-    private String name;
+    String name;
+    String interests;
 
-    @ColumnInfo(name = "interests")
-    private String interests;
+    public UserEntity(){ }
 
-
-
-
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
+    public UserEntity(String name, String interests) {
         this.name = name;
-    }
-
-    public String getInterests() {
-        return interests;
-    }
-
-    public void setInterests(String interests) {
         this.interests = interests;
-    }*/
+    }
 
     public int getKey() {
         return key;
@@ -48,16 +31,6 @@ public class UserModel {
 
     public void setKey(int key) {
         this.key = key;
-    }
-    String name;
-    String interests;
-
-    public UserModel(){
-
-    }
-    public UserModel(String name, String interests) {
-        this.name = name;
-        this.interests = interests;
     }
 
     public String getName() {
