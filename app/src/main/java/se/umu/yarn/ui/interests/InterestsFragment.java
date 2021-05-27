@@ -5,22 +5,21 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
-
 import java.util.List;
-
 import se.umu.yarn.model.interests.InterestEntity;
+import se.umu.yarn.EntityClass.InterestListModel;
+import se.umu.yarn.EntityClass.UserModel;
 import se.umu.yarn.R;
-
+import se.umu.yarn.ui.settings.SettingsFragment;
 import static android.util.Log.d;
 
 public class InterestsFragment extends Fragment {

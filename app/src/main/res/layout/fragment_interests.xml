@@ -35,8 +35,6 @@
         app:layout_constraintTop_toBottomOf="@id/interests_headline"
         >
 
-
-
     </androidx.recyclerview.widget.RecyclerView>
 
     <Button
